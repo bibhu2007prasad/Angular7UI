@@ -1,0 +1,271 @@
+<div class="main-content" id="maincontent">
+    <div class="content">
+        <div class="col-md-12 col-sm-6 col-xs-4 contnt-wrapper">
+            <div class="col-sm-6 col-md-6 col-xs-3 no-padding">
+                <span class="legal">Link Setup</span>
+            </div>
+            <div class="rightmenu">
+                <div class="toolbar pull-right">
+                    <ul class="toolbar-content">
+                        <!-- <li (click)="newClick()" [disabled]="isNewDisable"> -->
+                            <li (click)="newClick()" >
+                            <i class="fa fa-file-text" aria-hidden="true" title="New"></i>
+                            <label>
+                                New
+                            </label>
+                        </li>
+                        <li (click)="editClick()" >
+                            <i class="fa fa-pencil-square-o" aria-hidden="true" title="Edit"></i>
+                            <label>
+                                Edit
+                            </label>
+                        </li>
+                        <li (click)="onSubmit()" >
+                            <i class="fa fa-floppy-o" aria-hidden="true" title="Save"></i>
+                            <label>
+                                Save
+                            </label>
+                        </li>
+                      
+                        <li (click)="backClick()" >
+                            <i class="fa fa-reply" aria-hidden="true" title="Back"></i>
+                            <label>
+                                Back
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv" style="display:none;"> -->
+        <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv" *ngIf="isMainGridShow">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Link Name</th>
+                        <th>Url</th>
+                        <th>Purpose</th>
+                        <th>Order No</th>
+                        <th>Is Active</th>
+                        <th>Is Default</th>
+                        <th>Created On</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of linkSetUp.dataList ; index as i" (dblclick)="onRowClicked(data)" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+                        <!--<tr *ngFor="let data of holiday.dataList ; index as i" >-->
+                            <td style="display: none;">{{data.LinkID }}</td>
+                            <td>{{data.Srno }}</td>
+                            <td>{{data.LinkName }}</td>
+                            <td>{{data.url }}</td>
+
+                            <td>{{data.Purpose }}</td>
+                            <td>{{data.OrderNo }}</td>
+                            <td>{{data.IsActive }}</td>
+
+                            <td>{{data.IsDefault }}</td>
+                            <td>{{data.CreatedOn }}</td>
+                            
+                        </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+        <!-- <div class="col-md-12 col-sm-12 col-xs-12" id="divForm" style="display:none;margin-top: 3%;"> -->
+        <div class="col-md-12 col-sm-12 col-xs-12" id="divForm" style="margin-top: 3%;" *ngIf="isMasterEntryFormShow">
+            <div id="accordion1" class="accordion-style1 panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" data-target="#branch">
+                                <i class="fa fa-angle-right bigger-110"></i>&nbsp; Setup
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="panel-collapse collapse in show" id="branch">
+                        <div class="panel-body">
+                        <form [formGroup]="MasterLinkSetUpFormGroup" autocomplete="off">
+                            <div class=" col-sm-12 col-xs-12 col-md-12">
+                                <div class="row pl-3">
+                                    <div class="col-md-4 col-sm-3 col-xs-12 no-padding">
+                                        <div class="form-group input-group">
+                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                                Link Name
+                                            </label>
+                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                <input type="text" required name="linkName" class="col-sm-12 col-ms-12 col-xs-12 no-padding" formControlName="LinkName"
+                                                placeholder="Link Name" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group input-group" >
+                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-1-1">
+                                                Icon Name
+                                            </label>
+                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                <select class="dropdown col-sm-12 col-md-12 col-xs-12" formControlName="IconName" >
+                                                    <!-- <option>Select</option>
+                                                    <option>fa fa user</option>
+                                                    <option>fa fa-calendar</option> -->
+                                                    <option value="0" selected>Select</option>
+                                        <option *ngFor="let data of iconNameMaster.dataList" value={{data.ID}}  >
+                                            {{data.ClassName}}
+                                        </option>
+                                                </select>
+
+                                            </div>
+                                            <label id="lblIconDisplay" class="col-md-1 col-sm-1 col-xs-1">
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-1-1">
+                                                Is Active
+                                            </label>
+
+                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                <input type="checkbox" class="entityCheck" formControlName="IsActive" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-3 col-xs-12 no-padding">
+                                        <div class="form-group input-group" >
+                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-1-1">
+                                                Url
+                                            </label>
+                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                <input type="text" required name="uRL" class="col-sm-12 col-ms-12 col-xs-12 no-padding" formControlName="url"
+                                                placeholder="URL" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-1-1">
+                                                Purpose
+                                            </label>
+                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                <input type="text" class="col-sm-12 col-ms-12 col-xs-12 no-padding"  name="purpose" 
+                                                placeholder="Purpose" formControlName="Purpose" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-1-1">
+                                                Is Default
+                                            </label>
+
+                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                <input type="checkbox" class="entityCheck" formControlName="IsDefault" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-3 col-xs-12 no-padding">
+                                        <div class="form-group" >
+                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-1-1">
+                                                Order No.
+                                            </label>
+                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                <input type="text" class="col-sm-12 col-ms-12 col-xs-12 no-padding" required name="orderNo" class="col-sm-12 col-md-12 col-xs-12" formControlName="OrderNo"
+                                                placeholder="Order No" />
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-1-1">
+                                                Parent Menu
+                                            </label>
+                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                <select class="dropdown col-sm-12 col-md-12 col-xs-12" formControlName="ParentMenuId" >
+                                                    <!-- <option>Select</option>
+                                                    <option>Setup</option>
+                                                    <option>Video</option> -->
+                                                    <option value="0" selected>Select</option>
+                                                    <option *ngFor="let data of parentMenuMaster.dataList" value={{data.LinkID}}  >
+                                                        {{data.LinkName}}
+                                                    </option>
+                                                </select>
+
+                                            </div>
+                                            <i class="fa fa-plus-circle  plusicon" aria-hidden="true" (click)="onClick($event)"></i>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-md-4 col-sm-3 col-xs-12 no-padding">
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="parentMenu" [style.display]="showModal ? 'block' : 'none'">
+        <div class="modal-dialog">
+            <form [formGroup]="LinkSetUpFormGroup" autocomplete="off">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">
+                            Parent Menu
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal" (click)="hide()">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                            <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                                <div class="form-group input-group" [ngClass]="displayFieldCss('LinkName')">
+                                <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                                    <label class="col-md-3 col-sm-12 col-xs-12 no-padding-left" style="color: #1f3c61; font-size: 11px; margin-top:5px;">
+                                        Parent Menu:
+                                    </label>
+                                    <input type="text" required name="linkName" class="col-sm-12 col-md-12 col-xs-12" formControlName="LinkName"
+                                    placeholder="Link Name" id="txtparentmenu" maxlength="30">
+                                    <!-- <input type="button" class="col-md-2 col-sm-12 col-xs-12 btn btn-success pull-right" value="Save" id="Btnsaveparentmenu"> -->
+                                    <button type="submit" (click)="onSubmitParentMenu()" class="col-md-2 col-sm-12 col-xs-12 btn btn-success pull-right"> Save</button>
+                                </div>
+                                </div>
+                                <table id="poptable">
+                                    <thead>
+                                        <tr>
+
+                                            <th style="width: 22%;">Parent Name</th>
+                                            <th style="width: 10%;">Edit</th>
+                                            <th style="width: 10%;">Delete</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- <tr>
+                                            <td style="width: 22%;">Setup</td>
+                                            <td style="width: 10%;"><i class="fa fa-pencil-square-o greenpencil" aria-hidden="true"></i></td>
+                                            <td style="width: 10%;"><i class="fa fa-trash-o redtrash" aria-hidden="true"></i></td>
+                                        </tr> -->
+
+                                        <tr *ngFor="let data of parentMenuMaster.dataList ; index as i" (dblclick)="onParentMenuRowClicked(data)" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+                                            <!--<tr *ngFor="let data of holiday.dataList ; index as i" >-->
+                                                <td style="display: none;">{{data.LinkID }}</td>
+                                                <td>{{data.LinkName }}</td>
+                                                <td style="width: 10%;" (click)="EditParentMenu(data.LinkID)"><i class="fa fa-pencil-square-o greenpencil" aria-hidden="true"></i></td>
+                                                 <td style="width: 10%;" (click)="DeleteParentMenu(data.LinkID)"><i class="fa fa-trash-o redtrash" aria-hidden="true"></i></td>
+                                            </tr>
+                                       
+                                    </tbody>
+                                    </table>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

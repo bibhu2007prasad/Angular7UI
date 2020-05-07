@@ -1,0 +1,387 @@
+<div class="main-content" id="maincontent">
+    <div class="content">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12 " style="padding-top:5px">
+                <div class="col-sm-12 col-md-12 col-xs-12 ">
+                    <span class="legal">Single Mandate</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12 " style="float: right">
+                <div class="toolbar pull-right">
+                    <div class="toolbar">
+                        <ul class="toolbar-content">
+                            <li style="display: block" id="btnUpload">
+                                <i class="fa fa-upload" aria-hidden="true" title="Upload"></i>
+                                <label class="imgUpload">
+                                    Triplet Image
+                                </label>
+                                <input type="file" id="flImage" name="fl" />
+                            </li>
+                            <li id="onethird">
+                                <i class="fa fa-upload" aria-hidden="true" title="OneThird Upload"></i>
+                                <label>
+                                    Mandate Image
+                                </label>
+                                <input type="file" id="flOneThirdImage" name="fl" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 no-padding" style="margin-top: 5px" ; id="uploadBox">
+            <div class="col-md-7 col-sm-12 col-xs-12 no-padding">
+                <div class="row">
+                    <div class="divform scrollable" style="display: block;" id="bankFormBox">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="col-md-12 col-sm-12 col-xs-12 data">
+                                <div class="col-sm-12 col-md-12 col-xs-12 form-group no-padding">
+                                    <div class="col-md-6  col-sm-12  col-xs-12 no-padding">
+                                        <label class="col-sm-3 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                            Category Code:
+                                        </label>
+                                        <div class="col-sm-9 col-md-8 col-xs-8 no-padding-right">
+
+                                            <select class=" dropdown col-sm-12 col-md-12 col-xs-12">
+                                                <option>Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 col-sm-12 no-padding-right lblpaddingAll mdqyrtg mrgtop6">
+                                        <label class="col-sm-3 col-md-3 col-xs-4 control-label no-padding " for="form-field-1">
+                                            Utility Code:
+                                        </label>
+                                        <div class="col-sm-9 col-md-9 col-xs-8 no-padding-right">
+                                            <input type="text" class="col-sm-12 col-md-12 col-xs-12 no-padding" maxlength="18" placeholder="Enter Utility Code" />
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-12 col-md-12 col-xs-12 form-group no-padding">
+                                    <div class="col-md-6  col-sm-12  col-xs-12 no-padding">
+                                        <label class="col-sm-3 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                            Date on Mandate:
+                                        </label>
+                                        <div class="col-sm-9 col-md-8 col-xs-8 no-padding-right">
+                                            <input type="date" class="col-sm-12 col-md-12 col-xs-12 form-control" />
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 col-sm-12 no-padding-right lblpaddingAll mdqyrtg mrgtop6">
+                                        <label class="col-sm-3 col-md-3 col-xs-4 control-label no-padding" for="form-field-1">
+                                            Sponsor Bank Code:
+                                        </label>
+                                        <div class="col-sm-9 col-md-9 col-xs-8 no-padding-right">
+                                            <input type="text" class="col-sm-12 col-md-12 col-xs-12 no-padding" id="txtSponsorCode"
+                                                   placeholder="Enter Sponsor Bankcode" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 col-md-2 col-xs-4 control-label no-padding" for="form-field-1">
+                                        To Debit:
+                                    </label>
+                                    <div class="col-sm-9 col-md-10 col-xs-8 no-padding-right">
+                                        <div id="debitto" class="col-sm-12 col-md-12 col-xs-12 no-padding radio">
+                                            <label class="lblradiobtnss col-md-2 col-sm-2 col-xs-4 no-padding-right">
+                                                <input name="rdoNomToDebit" id="rdsb" value="sb" type="radio">
+                                                <span class="radiotext">SB</span>
+                                            </label>
+                                            <label class="lblradiobtnss col-md-2 col-sm-2 col-xs-4 no-padding-right">
+                                                <input name="rdoNomToDebit" id="rdca" value="ca" type="radio">
+                                                <span class="radiotext">CA</span>
+                                            </label>
+                                            <label class="lblradiobtnss col-md-2 col-sm-2 col-xs-4 no-padding-right">
+                                                <input name="rdoNomToDebit" id="rdcc" value="cc" type="radio">
+                                                <span class="radiotext">CC</span>
+                                            </label>
+                                            <label class="lblradiobtnss col-md-2 col-sm-3 col-xs-4 no-padding-right">
+                                                <input name="rdoNomToDebit" id="rdnbre" value="re" type="radio">
+                                                <span class="radiotext">SB-NRE</span>
+                                            </label>
+                                            <label class="lblradiobtnss col-md-2 col-sm-2 col-xs-4 no-padding-right">
+                                                <input name="rdoNomToDebit" id="rdsbnrd" value="rd" type="radio">
+                                                <span class="radiotext">SB-NRO</span>
+                                            </label>
+                                            <label class="lblradiobtnss col-md-2 col-sm-1 col-xs-4 no-padding-right">
+                                                <input name="rdoNomToDebit" id="rdother" value="ot" type="radio">
+                                                <span class="radiotext">Other</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-12 col-xs-12 form-group no-padding">
+                                    <div class="col-md-6  col-sm-12  col-xs-12 no-padding">
+                                        <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                            Mobile No.
+                                        </label>
+                                        <div class="col-sm-3 col-md-2 col-xs-3 no-padding-right">
+                                            <input type="text" id="txtmobile1" disabled="disabled" value="+91"
+                                                   class="col-sm-12 col-md-12 col-xs-12" />
+                                        </div>
+                                        <div class="col-sm-5 col-md-6 col-xs-5 no-padding-right">
+                                            <input type="text" id="txtmobile" disabled="disabled" class="col-sm-
+
+12 col-md-12 col-xs-12" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 col-sm-12 no-padding-right mdqyrtg mrgtop6">
+                                        <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                            Telephone No.
+                                        </label>
+                                        <div class="col-sm-3 col-md-2 col-xs-3 no-padding-right">
+                                            <input type="text" id="txtphone1" disabled="disabled" class="col-sm-
+
+12 col-md-12 col-xs-12" />
+                                        </div>
+                                        <div class="col-sm-5 col-md-6 col-xs-5 no-padding-right">
+                                            <input type="text" id="txtphone" disabled="disabled" class="col-sm-12
+
+col-md-12 col-xs-12" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 col-md-2 col-xs-4 control-label no-padding" for="form-field-1">
+                                        Bank a/c Number:
+                                    </label>
+                                    <div class="col-sm-9 col-md-10 col-xs-8 no-padding-right">
+                                        <input type="text" class="col-sm-12 col-md-12 col-xs-12 mandate" id="txtAcNo" maxlength="26" placeholder="Enter
+
+Bank a/c Number" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 col-md-2 col-xs-4 control-label no-padding" for="form-field-1">
+                                        With Bank:
+                                    </label>
+                                    <div class="col-sm-9 col-md-10 col-xs-8 no-padding-right">
+                                        <!-- <input type="text" id="txtbank" class="col-sm-12 col-md-12 col-xs-12" /> -->
+                                        <!-- <input  type="text" class="col-sm-12 col-md-12 col-xs-12 no-padding"
+
+                                        id="txtBankName" /> -->
+
+
+                                        <select class="col-sm-12 col-md-12 col-xs-12">
+                                            <option>RBL</option>
+                                            <option>KOTAK BANK</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-6  col-sm-12  col-xs-12 no-padding">
+                                        <label class="col-sm-3 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                            IFSC:
+                                        </label>
+                                        <div class="col-sm-9 col-md-8 col-xs-8 no-padding-right">
+                                            <input type="text" maxlength="11" class="col-sm-12 col-md-12
+
+col-xs-12 mandate"
+                                                   id="txtIFSC"
+                                                   placeholder="Enter IFSC" />
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 col-sm-12 no-padding-right lblpaddingAll mdqyrtg mrgtop6">
+                                        <label class="col-sm-3 col-md-2 col-xs-4 control-label no-padding " for="form-field-1">
+                                            MICR:
+                                        </label>
+                                        <div class="col-sm-9 col-md-10 col-xs-8 no-padding-right">
+                                            <input type="text" maxlength="9" class="col-sm-12 col-md-12
+
+col-xs-12 mandate"
+                                                   id="txtMICR" placeholder="Enter MICR" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-4 col-md-2 col-xs-4 control-label no-padding" for="form-field-1">
+                                        IFSC/MICR:
+                                    </label>
+                                    <div class="col-sm-8 col-md-10 col-xs-8 no-padding-right">
+                                        <input type="text" id="Text2" class="col-sm-12 col-md-12 col-xs-12" />
+                                    </div>
+                                </div>
+                                <div class="form-group" style="margin-top:6px">
+                                    <label class="col-sm-3 col-md-2 col-xs-4 control-label no-padding" for="form-field-1">
+                                        Amount(In Rs.):
+                                    </label>
+                                    <div class="col-sm-4 col-md-3 col-xs-4 no-padding-right">
+                                        <input type="text" class="col-sm-12 col-md-12 col-xs-12"
+                                               id="txtAmountRupees" placeholder="Enter Amount" maxlength="9" />
+                                    </div>
+                                    <div class="col-sm-5 col-md-7 col-xs-4 no-padding-right">
+                                        <input type="text" class="col-sm-12 col-md-12 col-xs-12" id="txtAmount"
+                                               disabled="disabled"
+                                               placeholder="Amount in words" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 col-md-2 col-xs-4 control-label no-padding" for="form-field-1">
+                                        Frequency:
+                                    </label>
+                                    <div class="col-sm-9 col-md-10 col-xs-8 no-padding-right">
+                                        <div id="Div1" class="col-sm-12 col-md-12 col-xs-12 no-padding radio">
+                                            <label class="lblradiobtnss col-md-2 col-sm-2 col-xs-5 no-padding-right">
+                                                <input name="rdoNomFrequency" id="rdmonthly" value="m" type="radio">
+                                                <span class="radiotext">Monthly</span>
+                                            </label>
+                                            <label class="lblradiobtnss col-md-2 col-sm-2 col-xs-4 no-padding-right">
+                                                <input name="rdoNomFrequency" id="rdquaterly" value="q" type="radio">
+                                                <span class="radiotext">Quarterly</span>
+                                            </label>
+                                            <label class="lblradiobtnss col-md-2 col-sm-2 col-xs-5 no-padding-right">
+                                                <input name="rdoNomFrequency" id="rdhalfyrly" value="h" type="radio">
+                                                <span class="radiotext">Half-Yearly</span>
+                                            </label>
+                                            <label class="lblradiobtnss col-md-2 col-sm-2 col-xs-4 no-padding-right">
+                                                <input name="rdoNomFrequency" id="rdyearly" value="y" type="radio">
+                                                <span class="radiotext">Yearly</span>
+                                            </label>
+                                            <label class="lblradiobtnss col-md-4 col-sm-4 col-xs-8 no-padding-right">
+                                                <input name="rdoNomFrequency" id="Radio1" value="a" type="radio">
+                                                <span class="radiotext">As & When Presented</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 col-md-2 col-xs-4 control-label no-padding" for="form-field-1">
+                                        Debit Type:
+                                    </label>
+                                    <div class="col-sm-9 col-md-10 col-xs-8 no-padding-right">
+                                        <div id="Div2" class="col-sm-12 col-md-12 col-xs-12 no-padding radio">
+                                            <label class="lblradiobtnss col-md-4 col-sm-3 col-xs-12 no-padding-right">
+                                                <input name="rdoNomDebit" id="rdfxdamt" value="f" type="radio">
+                                                <span class="radiotext">Fixed Amount</span>
+                                            </label>
+                                            <label class="lblradiobtnss col-md-5 col-sm-3 col-xs-12 no-padding-right">
+                                                <input name="rdoNomDebit" id="rdmaxamt" value="m" type="radio">
+                                                <span class="radiotext">Maximum Amount</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-12 col-xs-12 form-group no-padding">
+                                    <div class="col-md-6  col-sm-12  col-xs-12 no-padding">
+                                        <label class="col-sm-3 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                            Reference 1:
+                                        </label>
+                                        <div class="col-sm-9 col-md-8 col-xs-8 no-padding-right">
+                                            <input type="text" class="col-sm-12 col-md-12 col-xs-12 mandate"
+                                                   id="txtRefrence1" maxlength="20" placeholder="Enter
+
+Reference" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 col-sm-12 no-padding-right lblpaddingAll mdqyrtg mrgtop6">
+                                        <label class="col-sm-3 col-md-3 col-xs-4 control-label no-padding " for="form-field-1">
+                                            Reference 2:
+                                        </label>
+                                        <div class="col-sm-9 col-md-9 col-xs-8 no-padding-right">
+                                            <input type="text" class="col-sm-12 col-md-12 col-xs-12" id="txtRefrence2"
+                                                   disabled="disabled" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-12 col-md-12 col-xs-12 form-group no-padding">
+                                    <div class="col-md-6  col-sm-12  col-xs-12 no-padding">
+                                        <label class="col-sm-3 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                            Phone Number:
+                                        </label>
+                                        <div class="col-sm-9 col-md-8 col-xs-8 no-padding-right">
+                                            <input type="text" maxlength="10" class="col-sm-12 col-md-12 col-xs-12" placeholder="Enter Phone Number" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 col-sm-12 no-padding-right lblpaddingAll mdqyrtg mrgtop6">
+                                        <label class="col-sm-3 col-md-3 col-xs-4 control-label no-padding " for="form-field-1">
+                                            Email ID:
+                                        </label>
+                                        <div class="col-sm-9 col-md-9 col-xs-8 no-padding-right">
+                                            <input type="text" class="col-sm-12 col-md-12 col-xs-12"
+                                                   id="txtEmailId" placeholder="Enter Email ID" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <div class="col-sm-12 col-md-12 col-xs-12 form-group no-padding">
+                                        <label class="col-sm-3 col-md-2 col-xs-4 control-label no-padding" for="form-field-1">
+                                            Period From:
+                                        </label>
+                                        <div class="col-sm-9 col-md-10 col-xs-8 no-padding-right">
+                                            <input type="date" id="txtFrom" class="col-sm-12 col-md-12 col-
+
+xs-12 form-control date-picker mandate" name="date-picker" data-date-format="dd-mm-yyyy" placeholder="Select Date" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-xs-12 form-group no-padding">
+                                        <label class="col-sm-3 col-md-2 col-xs-4 control-label no-padding" for="form-field-1">
+                                            Period To:
+                                        </label>
+                                        <div class="col-sm-6 col-md-6 col-xs-8 no-padding-right">
+                                            <input type="text" id="txtTo" class="col-sm-12 col-md-12 col-
+
+xs-12 form-control date-picker" name="date-picker" data-date-format="dd-mm-yyyy" placeholder="Select Date" />
+                                        </div>
+                                        <label class="col-sm-1 col-md-1 col-xs-4 no-padding-right lblpaddingAll" style="text-align:center">Or</label>
+                                        <div class="col-sm-2 col-md-3 col-xs-8 no-padding">
+                                            <span class="col-sm-12 col-md-12 col-xs-12 chkbox" style="padding-top: 3px">
+                                                <input id="chkUntil" type="checkbox" class="pull-left col-sm-2 col-md-2 col-xs-0"
+                                                       checked="checked" style=" margin-top:1px">
+                                                <label class="col-sm-10 col-md-10 col-xs-10 control-label radiotext no-padding " style="padding-top: 4px;" id="chkuntillCancelled">
+                                                    Until Cancelled
+                                                </label>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-xs-12 form-group no-padding">
+                                        <div class="col-md-4 col-sm-4 col-xs-12 no-padding-left lblpaddingLeft">
+                                            <div class="col-sm-12 col-md-12 col-xs-12 no-padding">
+                                                <input type="text" class="col-sm-12 col-md-12 col-xs-12"
+                                                       id="txtCust1" placeholder="Enter Name" />
+                                            </div>
+                                            <label class="col-sm-12 col-md-12 col-xs-12 control-label text-center mrgtop4"
+                                                   for="form-field-1">
+                                                1. Name as in Bank Records (Sign. Primary Acc. Holder)
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-12 no-padding lblpaddingLeft">
+                                            <div class="col-sm-12 col-md-12 col-xs-12 no-padding">
+                                                <input type="text" class="col-sm-12 col-md-12 col-xs-12" id="txtCust2"
+                                                       disabled="disabled" />
+                                            </div>
+                                            <label class="col-sm-12 col-md-12 col-xs-12 control-label text-center mrgtop4"
+                                                   for="form-field-1">
+                                                2. Name as in Bank Records (Sign. Acc. Holder)
+                                            </label>
+                                        </div>
+                                        <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                                            <div class="col-sm-12 col-md-12 col-xs-12 no-padding-right lblpaddingLeft lblpaddingAll">
+                                                <input type="text" class="col-sm-12 col-md-12 col-xs-12" id="txtCust3"
+                                                       disabled="disabled" />
+                                            </div>
+                                            <label class="col-sm-12 col-md-12 col-xs-12 control-label text-center mrgtop4"
+                                                   for="form-field-1">
+                                                3. Name as in Bank Records (Sign. Acc. Holder)
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <button type="button" class="btn btn-success pull-right">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-5"></div>
+        </div>
+    </div>
+</div>

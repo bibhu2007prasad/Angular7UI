@@ -1,0 +1,172 @@
+<!--<div id="navbar" class="navbar navbar-default ace-save-state" style="display: block">
+    <div class="quickLeftDiv">
+        <div class="navbar-container ace-save-state" id="navbar-container">
+            <div class="navbar-header pull-left">
+                <a href="#" class="navbar-brand">
+                    <img src="../../ClientApp/assets/images/quickcheck1.png" style="width: 100%;">
+
+
+                </a>
+
+            </div>
+        </div>
+    </div>
+    <div class="quickrightDiv">
+        <div>
+            <h5 class="logout">Logout</h5>
+
+        </div>
+        <div class="navbar-buttons navbar-header pull-right adminddl" role="navigation">
+        </div>
+
+    </div>
+</div>-->
+
+<div class="zipNachTheme">
+    <div id="navbar" class="navbar navbar-default ace-save-state">
+        <div class="quickLeftDiv">
+            <div class="navbar-container ace-save-state" id="navbar-container">
+                <button type="button" class="navbar-toggle menu-toggler pull-left logotop" id="menu-toggler"
+                        data-target="#sidebar">
+                    <span class="sr-only">Toggle sidebar</span> <span class="icon-bar"></span><span class="icon-bar">
+                    </span><span class="icon-bar"></span>
+                </button>
+                <div class="navbar-header pull-left quickDiv">
+                    <a href="#" class="navbar-brand zipNachlogo" id="newnotification">
+                        <img src="../../ClientApp/assets/images/logoZipNach.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="navbar-buttons navbar-header pull-right adminddl" role="navigation">
+                <ul class="nav ace-nav">
+                    <li class="">
+                        <ul>
+                            <li class="shownotification">
+                                <i class="fa fa-bell bellicon" aria-hidden="true"></i>
+                                <div id="divnotificationcircle" class="notificationcircle">
+                                    <p id="lblcountnotification">
+                                    </p>
+                                </div>
+                                <div class="newnotificationclass" id="noNewNotification" style="display: none">
+                                    <i class="fa fa-bell-slash" aria-hidden="true"></i>No New Notifications!
+                                </div>
+                                <div class="newnotificationclass " id="newnotificationdiv" style="display: none">
+                                    <div class="newnotificationdiv">
+                                        <i class="fa fa-times-circle timescircleicons"></i>
+                                        <span class="newnotificationspan"><i class="fa fa-envelope envelopeicons" aria-hidden="true"></i><label>Mandate ID-5234587968 Verified</label></span>
+                                        <span class="clocknewnotificationspan"><i class="fa fa-clock-o clockicons" aria-hidden="true"></i>10:02 AM</span>
+
+                                    </div>
+                                    <div class="newnotificationdiv notificationunread">
+                                        <i class="fa fa-times-circle timescircleicons"></i>
+                                        <span class="newnotificationspan"><i class="fa fa-envelope envelopeicons" aria-hidden="true"></i><label>Mandate ID-5234587968 UnVerified</label></span>
+                                        <span class="clocknewnotificationspan"><i class="fa fa-clock-o clockicons" aria-hidden="true"></i>10:02 AM</span>
+
+                                    </div>
+                                    <div class="newnotificationdiv">
+                                        <i class="fa fa-times-circle timescircleicons"></i>
+                                        <span class="newnotificationspan"><i class="fa fa-envelope envelopeicons" aria-hidden="true"></i><label>Mandate ID-5234587968 UnVerified</label></span>
+                                        <span class="clocknewnotificationspan"><i class="fa fa-clock-o clockicons" aria-hidden="true"></i>10:02 AM</span>
+
+                                    </div>
+                                    <div class="newnotificationdiv">
+                                        <i class="fa fa-times-circle timescircleicons"></i>
+                                        <span class="newnotificationspan"><i class="fa fa-envelope envelopeicons" aria-hidden="true"></i><label>Mandate ID-5234587968 UnVerified</label></span>
+                                        <span class="clocknewnotificationspan"><i class="fa fa-clock-o clockicons" aria-hidden="true"></i>10:02 AM</span>
+
+                                    </div>
+                                </div>
+                                <div id="notificationDiv" style="display: none">
+
+                                </div>
+                            </li>
+                            <!--<li id="guide">
+                                <i class="fa fa-file" aria-hidden="true" title="New"></i>
+                                <label style="cursor: pointer;">
+                                    Guidelines
+                                </label>
+                                <div id="guidelines" style="display:none">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                                        <h5 style="text-align: center; display: none; ">
+                                            Guidelines
+                                        </h5>
+                                        <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                                            <label class="read">
+                                                <b class="boldspan">READ</b>
+                                            </label>
+                                            <label class="all">
+                                                <b class="boldspan">ALL</b>
+                                            </label>
+
+                                            <label class="unread">
+                                                <b class="boldspan">UNREAD</b>
+                                            </label>
+                                        </div>
+                                        <ul style="line-height: 2;">
+                                            <li>Upload image file should be in JPEG format.</li>
+                                            <li>
+                                                Upload image should not be more then 3MB and resolution must be equal to or greater
+                                                than 300dpi.
+                                            </li>
+                                            <li>Mandate form has to be filled and signed by black gel pen only.</li>
+                                            <li>E-Mandate is not allowed for Joint Accounts.</li>
+                                            <li>
+                                                Physical Mandates should be submitted from 'Unverified Mandate' form to be processed
+                                                further by sponsor bank.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>-->
+                        </ul>
+                    </li>
+                    <li class="light-blue dropdown-modal">
+                        <a data-toggle="dropdown" href="#" onclick="logout()" class="dropdown-toggle no-padding">
+                            <span class="user-info" (click)="logout()">Welcome User</span>
+
+                        </a>
+                        <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close"
+                            style="background-color: #fcfeff;" id="rbllogpassword">
+                            <li class="logouthover" id="holidayplaneclick">
+                                <i class="logoutdiv ace-icon fa fa-plane">
+                                </i><span class="logoutcolor">Holidays List</span>
+                            </li>
+                            <li class="logouthover" onclick="changepwd()" id="changepasswordlock">
+                                <i class="logoutdiv ace-icon fa fa-key"
+                                   aria-hidden="true"></i><span class="logoutcolor">Change Password</span>
+                            </li>
+                            <!-- <li class="logouthover" onclick="Logout(0);"> -->
+                            <li class="logouthover" >
+                                <i class="logoutdiv ace-icon fa fa-power-off">
+                                </i><span class="logoutcolor" (click)="logout()">Log Out</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="guideDiv guidetext" style="display:none">
+                <ul>
+
+                    <li class="shownotification">
+                        <i class="fa fa-bell bellicon" aria-hidden="true"></i>
+                        <div id="divnotificationcircle" class="notificationcircle">
+                            <p id="lblcountnotification"></p>
+                        </div>
+                    </li>
+                    <li id="guide">
+                        <i class="fa fa-file-text" aria-hidden="true" title="New"></i>
+                        <label style="cursor: pointer;">
+                            Guidelines
+                        </label>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+
+    </div>
+</div>

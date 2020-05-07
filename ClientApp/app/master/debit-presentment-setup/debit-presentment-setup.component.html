@@ -1,0 +1,314 @@
+<div class="main-content" id="maincontent">
+    <div class="content">
+        <div class="col-md-12 col-sm-6 col-xs-4 contnt-wrapper">
+            <div class="col-sm-6 col-md-6 col-xs-3 no-padding">
+                <span class="legal">Debit Presentment Setup</span>
+            </div>
+            <div class="rightmenu">
+                <div class="toolbar pull-right">
+                    <ul class="toolbar-content">
+
+                        <li>
+                            <i class="fa fa-file-text" aria-hidden="true" title="New"></i>
+                            <label>
+                                New
+                            </label>
+                        </li>
+                        <li>
+                            <i class="fa fa-pencil-square-o" aria-hidden="true" title="Edit"></i>
+                            <label>
+                                Edit
+                            </label>
+                        </li>
+                        <li>
+                            <i class="fa fa-floppy-o" aria-hidden="true" title="Save"></i>
+                            <label>
+                                Save
+                            </label>
+                        </li>
+
+                        <li style="display: none">
+                            <i class="fa fa-times" aria-hidden="true"
+                               title="Delete"></i>
+                            <label>
+                                Delete
+                            </label>
+                        </li>
+                        <li>
+                            <i class="fa fa-reply" aria-hidden="true" title="Back"></i>
+                            <label>
+                                Back
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-12 col-sm-12 col-xs-12" id="divForm" style="display:block;margin-top: 3%;">
+            <form>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="form-group">
+                            <label class="col-sm-6 col-md-4 col-xs-4 control-label no-padding" for="form-field-1"> Entity </label>
+                            <div class="col-sm-6 col-md-7 col-xs-7 no-padding-left txtField">
+                                <select class="dropdown col-sm-12 col-md-12 col-xs-12">
+                                    <option>Select</option>
+                                    <option>Entity 1</option>
+                                    <option>Entity 2</option>
+                                    <option>Entity 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="form-group">
+                            <label class="col-sm-6 col-md-4 col-xs-4 control-label no-padding" for="form-field-1"> Bank </label>
+                            <div class="col-sm-6 col-md-7 col-xs-7 no-padding-left txtField">
+                                <select class="dropdown col-sm-12 col-md-12 col-xs-12">
+                                    <option>Select</option>
+                                    <option>Bank 1</option>
+                                    <option>Bank 2</option>
+                                    <option>Bank 3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="clearfix">
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-12 no-padding" style="margin-top: 1%;">
+                    <span class="legal" style="font-size: 13px; color: #1f497d; font-style: normal;">Bank Name</span>
+
+                </div>
+                <div class=" DivAllDimensionDetails  col-md-12 col-sm-12 col-xs-12 tabscrollview entityCheckscroll">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-3 col-xs-12">
+                            <span class="presentmentTitle">Presentment File Sequence:</span>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 no-padding-left">
+                            <div class="form-group">
+                                <label class="col-sm-3 col-md-3 col-xs-3 control-label no-padding" for="form-field-1">
+                                    Total Length:
+                                </label>
+                                <div class="col-sm-8 col-md-8 col-xs-8 no-padding txtField">
+                                    <input type="text" maxlength="11" class="col-sm-12 col-md-12 col-xs-12 no-padding"
+                                           placeholder=" ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 no-padding-left">
+                            <label class="col-sm-12 col-md-12 col-xs-12 control-label no-padding"
+                                   for="form-field-1" style="padding-top: 8px !important; color: #da3131; font-weight: normal;
+                                        font-size: 11px; display: none">
+                                Length Mismatched
+                            </label>
+                            <label>
+                                Remaining Count:
+                            </label>
+                            <label id="RemainingCount" class="txtField">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                        <div class="row">
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <div class="form-group">
+                                    <label class="col-sm-3 col-md-3 col-xs-3 control-label no-padding" for="form-field-1">
+                                        Name:
+                                    </label>
+                                    <div class="col-sm-8 col-md-8 col-xs-8 no-padding txtField">
+                                        <select class="dropdown col-sm-12 col-md-12 col-xs-12">
+                                            <option>Select</option>
+                                            <option>Constant</option>
+                                            <option>Seperator</option>
+                                            <option>Date</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12 no-padding-left">
+                                <div class="form-group">
+                                    <label class="col-sm-3 col-md-3 col-xs-3 control-label no-padding" for="form-field-1">
+                                        Length:
+                                    </label>
+                                    <div class="col-sm-8 col-md-8 col-xs-8 no-padding txtField">
+                                        <input type="text" class="col-sm-12 col-md-12 col-xs-12">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-3 col-xs-12 no-padding-left">
+                                <div class="form-group">
+                                    <label class="col-sm-3 col-md-3 col-xs-3 control-label no-padding" for="form-field-1">
+                                        Value:
+                                    </label>
+                                    <div class="col-sm-8 col-md-8 col-xs-8 no-padding txtField">
+                                        <input type="text" class="col-sm-12 col-md-12 col-xs-12"
+                                               placeholder="Select Value">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-12 no-padding-left" id="divdateformat" style="display: none">
+                                <div class="form-group">
+                                    <label class="col-sm-3 col-md-3 col-xs-3 control-label no-padding" for="form-field-1">
+                                        Date Format:
+                                    </label>
+                                    <div class="col-sm-8 col-md-8 col-xs-8 no-padding">
+                                        <input type="text" class="col-sm-12 col-md-12 col-xs-12 no-padding"
+                                               placeholder="Select Date Format" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-2 col-xs-12 pull-right  no-padding-left">
+                                <div class="form-group col-md-12 no-padding pull-right">
+                                    <div class="AddbtnDimensionDetail col-md-10 pull-right">
+                                        <input type="button" class=" pull-right AddbtnCSS col-md-10 btn btn-success marginbtnadd"
+                                               value="Add">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 no-padding marginrowadd" style="margin: 5px 0">
+                            <table class="DimensionTable table table-striped table-hover">
+                                <tbody>
+                                    <tr>
+                                        <td class="CCtexTextareaHighlight"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                        <div class="col-md-9 col-sm-12 col-xs-12 no-padding">
+                            <div class="form-group" style="margin-top: 5px; margin-bottom: 0px;">
+                                <label id="Label1" class="col-sm-3 col-md-4 col-xs-3 control-label no-padding-left">
+                                    File Format:
+                                </label>
+                                <div class="col-sm-4 col-md-7 col-xs-8 no-padding txtField">
+                                    <div class="col-md-3 col-sm-4 col-xs-4 no-padding txtField">
+                                        <label class="no-padding">
+                                            <input class="entityCheck" name="overprint"
+                                                   value="checkbox" type="checkbox">
+                                            <span style="vertical-align: top">XML</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 No-padding txtField">
+                                        <label class="no-padding">
+                                            <input class="entityCheck" name="overprint"
+                                                   value="checkbox" type="checkbox">
+                                            <span style="vertical-align: top">Excel</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4 col-xs-4 txtField">
+                                        <label class="no-padding">
+                                            <input class="entityCheck" name="overprint"
+                                                   value="checkbox" type="checkbox">
+                                            <span style="vertical-align: top">CSV</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                        <div class="form-group">
+                            <label id="Label2" class="col-sm-3 col-md-3 col-xs-12 control-label no-padding">
+                                Presentment Submission Date & Time:
+                            </label>
+
+                            <div id="dateTime" class="col-sm-9 col-md-9 col-xs-12 no-padding-left radio txtField">
+
+                                <div class="col-md-12 col-sm-12 col-xs-12 no-padding displayinlineblock">
+                                    <label class="lblradiobtnss col-md-2 col-sm-2 col-xs-3 dailybottom txtField">
+                                        <input name="rdoDate" value="D" type="radio" />
+                                        <span>Daily</span>
+                                    </label>
+                                    <input type="date" name="" class="col-sm-9 col-md-9 col-xs-8  dailywidth  rowalign txtField" />
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 no-padding weekly txtField">
+                                    <label class="lblradiobtnss col-md-2 col-sm-2 col-xs-3 dailybottom txtField">
+                                        <input name="rdoDate" value="W" type="radio" />
+                                        <span>Weekly</span>
+                                    </label>
+                                    <div class="col-md-5 col-sm-9 col-xs-8 no-padding-left rowalign weeklyinputbox txtField">
+                                        <select class="dropdown col-sm-12 col-md-12 col-xs-12">
+                                            <option>Select</option>
+                                            <option>Bank 1</option>
+                                            <option>Bank 2</option>
+                                            <option>Bank 3</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="col-md-5 col-sm-9 col-xs-8 no-padding-left rowalign weeklydrop weeklyinputbox txtField">
+                                        <input type="text" name="" class="col-sm-12 col-md-10 col-xs-12 tabletmargin" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 no-padding monthlyDiv txtField">
+                                    <label class="lblradiobtnss col-md-2 col-sm-2 col-xs-3 dailybottom txtField">
+                                        <input name="rdoDate" value="M" type="radio" />
+                                        <span>Monthly</span>
+                                    </label>
+                                    <div class="col-md-5 col-sm-9 col-xs-8 no-padding-left rowalign weeklyinputbox txtField">
+                                        <input type="text" name="" class="col-sm-12 col-md-12 col-xs-12 weeklyrowwidth tabletmargin" />
+                                    </div>
+                                    <div class="col-md-5 col-sm-9 col-xs-8 no-padding-left rowalign weeklydrop weeklyinputbox txtField">
+                                        <input type="text" name="" class="col-sm-12 col-md-10 col-xs-12 tabletmargin no-padding" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 no-padding AdhocDiv txtField">
+                                    <label class="lblradiobtnss col-md-2 col-sm-2 col-xs-3 dailybottom txtField">
+                                        <input name="rdoDate" value="A" type="radio" />
+                                        <span>Adhoc</span>
+                                    </label>
+                                    <div class="col-md-5 col-sm-9 col-xs-8 no-padding-left rowalign weeklyinputbox txtField">
+                                        <input type="text" name="" class="col-sm-12 col-md-12 col-xs-12 weeklyrowwidth tabletmargin" />
+                                    </div>
+                                    <div class="col-md-5 col-sm-9 col-xs-8 no-padding-left weeklydrop txtField">
+                                        <input type="text" name="" class="col-sm-12 col-md-10 col-xs-12 tabletmargin" />
+
+                                      
+                                    </div>
+                                    <div id="Div1" class="col-md-12 col-sm-12 col-xs-12 no-padding" style="margin: 5px 0;display:none;">
+                                        <table id="tbladhoc" class="DimensionTable table table-striped table-hover">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="CCtexTextareaHighlight"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="form-group" style="margin-top: 0px; margin-bottom: 0px;">
+                                <label id="Label3" class="col-sm-3 col-md-3 col-xs-12 control-label no-padding">
+                                    Mean Time to presentment:
+                                </label>
+                                <div id="Div2" class="col-sm-7 col-md-7 col-xs-9 no-padding txtField">
+                                    <div class=" col-md-12 col-sm-12 col-xs-12 no-padding-left" style="margin-bottom: 5px">
+                                        <input type="text" class="col-sm-6 col-md-6 col-xs-10"
+                                               placeholder="00:00" maxlength="5" style="margin-right: 4px" />
+                                        <span>Hrs</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+

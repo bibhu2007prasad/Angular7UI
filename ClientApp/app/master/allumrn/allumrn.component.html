@@ -1,0 +1,318 @@
+<div class="main-content" id="maincontent">
+    <div class="content">
+        <form [formGroup]="AllUMRNFormSearchGroup" autocomplete="off">
+            <div class="col-md-12 col-sm-6 col-xs-4 contnt-wrapper">
+                <div class="col-sm-6 col-md-6 col-xs-3 no-padding">
+                    <span class="legal">All UMRN</span>
+                </div>
+                <div class="rightmenu">
+                    <div class="toolbar pull-right">
+
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="col-sm-12 col-xs-12 col-md-12">
+                <div class="col-sm-12 col-xs-12 col-md-12">
+                    <div class="row boxhead">
+                        <div class="col-md-4 col-sm-5 col-xs-12 no-padding">
+                            <div class="form-group">
+                                <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                    UMRN:
+                                </label>
+                                <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                    <input name="uMRN" class="col-sm-12 col-md-12 col-xs-12" formControlName="UMRNSearch" placeholder="UMRN">
+                                    <!-- <input name="uMRN" class="col-sm-12 col-md-12 col-xs-12" placeholder="UMRN"> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-5 col-xs-12 no-padding">
+                            <div  class="form-group">
+                                <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
+                                    Customer Name:
+                                </label>
+                                <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                    <input name="customerName" class="col-sm-12 col-md-12 col-xs-12" formControlName="CustomerNameSearch" 
+                                    placeholder="Customer Name">
+                                    <!-- <input name="customerName" class="col-sm-12 col-md-12 col-xs-12"  
+                                    placeholder="Customer Name"> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-5 col-xs-12 no-padding">
+                            <div class="form-group">
+                                <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
+                                    Reference Number:
+                                </label>
+                                <div class="col-sm-7 col-md-8 col-xs-7 no-padding txtField">
+                                    <input name="refrenceNumber" class="col-sm-12 col-md-12 col-xs-12" formControlName="RefrenceNumberSearch"
+                                    placeholder="Refrence Number">
+                                    <!-- <input name="refrenceNumber" class="col-sm-12 col-md-12 col-xs-12" 
+                                    placeholder="Refrence Number"> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 col-sm-2 col-xs-12  no-padding">
+                            <div class=" col-md-12 pull-right no-padding-right">
+                                <!-- <input type="button" class=" AddbtnCSS btn btn-success" style="padding:0 8px; margin-top: 5px; display:inline-block;float: right;" id="" value="Search"> -->
+                                <button style="width: fit-content;" type="submit" (click)="SearchAllUMRN();" class="btn btn-primary btn-block mr-1"> Search</button>
+                                
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-12 col-sm-12 col-xs-12 clearfix">
+
+                <div class="col-md-4 col-sm-4 col-xs-4 pull-right">
+                    <div class="toolbar pull-right">
+                        <ul class="toolbar-content">
+                            <li (click)="onClick($event)">
+                                <i class="fa fa-plus-square" aria-hidden="true" title="">
+                                </i>
+                                <label>
+                                    Add
+                                </label>
+                            </li>
+                            <li>
+                                <i class="fa fa-reply" aria-hidden="true" title="New">
+                                </i>
+                                <label>
+                                    Back
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+      
+            <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv">
+                <div class="col-md-2 col-sm-2 col-xs-12  no-padding">
+                    <div class=" col-md-12 pull-right no-padding">
+                        <input type="button" class=" AddbtnCSS btn btn-success" style="padding:0 8px; margin-top: 5px; display:inline-block; margin-right:5px" value="Export To Excel">
+                    </div>
+                </div>
+                <table style="margin-top:1%;">
+                    <thead>
+                        <tr>
+                            <!-- <th>Sr No.</th> -->
+                            <th>UMRN</th>
+                            <th>Customer Name</th>
+                            <th>Reference Number</th>
+                            <th>Amount</th>
+
+                            <th>From Date</th>
+                            <th>To Date</th>
+                            <th>Created On</th>
+                            <th>Record Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr (click)="onClick1($event)" *ngFor="let data of allUMRN.dataList ; index as i" (dblclick)="onRowClicked(data)" (click)="setClickedRow(i)" [class.active]="i == selectedRow"> -->
+                        <tr *ngFor="let data of allUMRN.dataList ; index as i" (dblclick)="onRowClicked(data)" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+                            <!--<tr *ngFor="let data of holiday.dataList ; index as i" >-->
+                            <!-- <th>{{data.Sno }}</th> -->
+                            <td>{{data.UMRN }}</td>
+                            <td>{{data.CustomerName }}</td>
+                            <td>{{data.Refrence }}</td>
+                            <td>{{data.Amount }}</td>
+                            
+
+
+                            <td>{{data.FromDate }}</td>
+                            <td>{{data.ToDate }}</td>
+                            <td>{{data.CreatedOn }}</td>
+                            <td>{{data.RecordType }}</td>
+                            
+                            
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+        </form>
+    </div>
+    
+    <div class="modal" id="createUMRN" [style.display]="showModal ? 'block' : 'none'">
+        <form [formGroup]="AllUMRNFormGroup" autocomplete="off">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">
+                            <img src="../../ClientApp/assets/images/link_file-512.png" />
+                            Create UMRN
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal" (click)="hide()">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                            <div class="col-sm-12 col-xs-12 col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group input-group" [ngClass]="displayFieldCss('UMRN')">
+                                            <div class="row">
+                                                <label class="col-sm-5 col-md-5 col-xs-5 control-label">
+                                                    UMRN:
+                                                </label>
+                                                <div class="col-sm-6 col-md-6 col-xs-6 no-padding">
+                                                    <input required name="uMRN" class="col-sm-12 col-md-12 col-xs-12" formControlName="UMRN"
+                                                    placeholder="UMRN" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group input-group" [ngClass]="displayFieldCss('CustomerName')">
+                                            <div class="row">
+                                                <label class="col-sm-5 col-md-5 col-xs-5 control-label " for="form-field-2">
+                                                    Customer Name:
+                                                </label>
+                                                <div class="col-sm-6 col-md-6 col-xs-6  no-padding">
+                                                    <input required name="customerName" class="col-sm-12 col-md-12 col-xs-12" formControlName="CustomerName"
+                                                    placeholder="Customer Name" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group input-group" [ngClass]="displayFieldCss('Refrence')">
+                                            <div class="row">
+                                                <label class="col-sm-5 col-md-5 col-xs-5 control-label">
+                                                    Reference No.:
+                                                </label>
+                                                <div class="col-sm-6 col-md-6 col-xs-6 no-padding">
+                                                    <input required name="refrenceNumber" class="col-sm-12 col-md-12 col-xs-12" formControlName="Refrence"
+                                                    placeholder="Refrence Number" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group input-group" [ngClass]="displayFieldCss('Amount')">
+                                            <div class="row">
+                                                <label class="col-sm-5 col-md-5 col-xs-5 control-label" for="form-field-2">
+                                                    Amount:
+                                                </label>
+                                                <div class="col-sm-6 col-md-6 col-xs-6 no-padding">
+                                                    <input required name="amount" class="col-sm-12 col-md-12 col-xs-12" formControlName="Amount"
+                                                    placeholder="Amount" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 col-xs-12 col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group input-group" [ngClass]="displayFieldCss('FromDate')">
+                                            <div class="row">
+                                                <label class="col-sm-5 col-md-5 col-xs-5 control-label">
+                                                    From Date:
+                                                </label>
+                                                <div class="col-sm-6 col-md-6 col-xs-6 no-padding">
+                                                    <input type="date" required name="fromDate" class="col-sm-12 col-md-12 col-xs-12" formControlName="FromDate"
+                                                    placeholder="From Date" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="form-group input-group" [ngClass]="displayFieldCss('ToDate')">
+                                            <div class="row">
+                                                <label class="col-sm-5 col-md-5 col-xs-5 control-label" for="form-field-2">
+                                                    To Date:
+                                                </label>
+                                                <div class="col-sm-6 col-md-6 col-xs-6 no-padding">
+                                                    <input type="date" required name="toDate" class="col-sm-12 col-md-12 col-xs-12" formControlName="ToDate"
+                                                    placeholder="To Date" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <!-- <button type="button" class="btn btn-success" data-dismiss="modal" (click)="hide()">Submit</button> -->
+                        <button style="width: fit-content;" type="submit" (click)="onSubmit()" class="btn btn-primary btn-block mr-1"> Save</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+  
+
+
+    <div class="modal" id="umrnDetails" [style.display]="showModal1 ? 'block' : 'none'">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                         UMRN Statement
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal" (click)="hide()">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div class="col-md-12 col-sm-12 col-xs-12 no-padding" id="detailsUMRN">
+                        <div class="col-md-2 col-sm-2 col-xs-12 no-padding">
+                            <div class=" col-md-12 pull-right no-padding">
+                                <input type="button" class=" AddbtnCSS btn btn-success" style="padding:0 8px; margin-top: 5px; display:inline-block; margin-right:5px" value="Export To Excel">
+                            </div>
+                        </div>
+                        <table style="margin-top:1%;">
+                            <thead>
+                                <tr>
+                                    <!-- <th>Sr No.</th> -->
+                                    <th>UMRN</th>
+                                    <th>Amount</th>
+                                    <th>Reference No.</th>
+                                    <th>Customer Name</th>
+                                    <th>From Date</th>
+                                    <th>To Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr  *ngFor="let data of legacyDetails.dataList ; index as i" [class.active]="i == selectedRow">
+                                    <!--<tr *ngFor="let data of holiday.dataList ; index as i" >-->
+                                    <!-- <th>{{data.Sno }}</th> -->
+                                    <td>{{data.UMRN }}</td>
+                                    <td>{{data.Amount }}</td>
+                                    <td>{{data.Refrence }}</td>
+                                    <td>{{data.CustomerName }}</td>
+                                    <td>{{data.FromDate }}</td>
+                                    <td>{{data.ToDate }}</td>
+                                    <td>{{data.Status }}</td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+             
+            </div>
+        </div>
+    </div>
+</div>
+

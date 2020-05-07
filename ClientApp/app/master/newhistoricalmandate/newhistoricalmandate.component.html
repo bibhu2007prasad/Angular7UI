@@ -1,0 +1,247 @@
+<div class="main-content" id="maincontent">
+    <div class="content">
+        <form [formGroup]="HistoricalMandateForm" autocomplete="off" >
+        <div class="col-md-12 col-sm-6 col-xs-4 contnt-wrapper">
+            <div class="col-sm-6 col-md-6 col-xs-3 no-padding">
+                <span class="legal">Historical Mandate</span>
+            </div>
+            <div class="rightmenu">
+                <div class="toolbar pull-right">
+                    <label>
+                        Total Mandate Count :
+                    </label>
+                    <label id="lblTotalMcont">
+                        <span [innerHTML]="TotalCount"> 0 </span>
+
+                    </label>
+
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="col-sm-12 col-xs-12 col-md-12">
+            <div class="col-sm-12 col-xs-12 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                From Date:
+                            </label>
+                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                <!-- <input type="date" class="col-sm-12 col-md-12 col-xs-12" /> -->
+                                <input name="FromDate" type="date" id=""    value="{{CurrentDate | date:'yyyy-MM-dd'}}"    class="col-sm-12 col-md-12 col-xs-12 htmldateheight" #FromDate formControlName="FromDate" />    
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                        <div class="form-group">
+                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
+                                To Date:
+                            </label>
+                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                <!-- <input type="date" class="col-sm-12 col-md-12 col-xs-12" /> -->
+                                <input name="ToDate" type="date" id=""    value="{{CurrentDate | date:'yyyy-MM-dd'}}"    class="col-sm-12 col-md-12 col-xs-12 htmldateheight" #ToDate formControlName="ToDate" /> 
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <div class="form-group">
+                            <div class="col-sm-3 col-md-3 col-xs-3 displayinlineblock">
+                                <input type="button" class="col-sm-12 col-md-12 col-xs-12y btn btn-primary htmldateheight" value="Search" (click)="SearchFunction(FromDate.value,ToDate.value)" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1 col-md-1 col-xs-12 no-padding address">
+                <label class="add">
+                    Filter By:
+                </label>
+            </div>
+            <div class="col-sm-12 col-xs-12 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 col-sm-8 col-xs-12 no-padding">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-md-4 col-xs-2 control-label no-padding" for="form-field-2">
+                                Corporate:
+                            </label>
+                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                <!-- <select class="dropdown col-sm-6 col-md-12 col-xs-6">
+                                    <option>Corporate 1</option>
+                                    <option>Corporate 2</option>
+                                    <option>Corporate 3</option>
+                                    <option>Corporate 4</option>
+                                </select> -->
+
+                                <select class="dropdown col-sm-12 col-md-12 col-xs-12" formControlName="EntityId" >
+                                    <!-- <option>Select</option>
+                                    <option>fa fa user</option>
+                                    <option>fa fa-calendar</option> -->
+                                    <option value="0" selected>Select</option>
+                        <option *ngFor="let data of corporate.dataList" value={{data.EntityId}}  >
+                            {{data.Name}}
+                        </option>
+                                </select>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                Reference No:
+                            </label>
+                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                <input type="text" class="col-sm-12 col-md-12 col-xs-12" ng-change="Search(ReferenceNo)"  name="referenceNo" formControlName="ReferenceNo"
+                                placeholder="Reference No"/>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+
+                        <div class="form-group">
+                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                Activity Name:
+                            </label>
+                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                <input type="text" class="col-sm-12 col-md-12 col-xs-12" ng-change="Search(ActivityName)"  name="activityName" formControlName="ActivityName"
+                                placeholder="Activity Name" />
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv">
+            <div class="col-md-2 col-sm-2 col-xs-12  no-padding">
+                <div class=" col-md-12 pull-right no-padding">
+                    <!-- <input type="button" class=" AddbtnCSS btn btn-success" style="padding:0 8px; margin-top: 5px; display:inline-block; margin-right:5px" value="Export To Excel"> -->
+                    <input type="button" class="col-sm-12 col-md-1 col-xs-12y btn btn-primary htmldateheight" value="Export To Excel" (click)="download()" />
+                </div>
+            </div>
+            <table style="margin-top:1%;">
+                <thead>
+                    <tr>
+
+                        <th style="width:300px;">Parent Bank Name</th>
+                        <th style="width:350px;">Corporate Name</th>
+                        <th style="width:150px;">Activity Name</th>
+
+                        <th style="width:300px;">Mandate Status</th>
+                        <th style="width:350px;">Mandate Id</th>
+                        <th style="width:150px;">Reference 1</th>
+                        <th style="width:150px;">Accept Reference No.</th>
+                        <th style="width:150px;">NPCI Msg Id</th>
+                        <th style="width:150px;">MSG ID</th>
+                        <th style="width:350px;">UMRN</th>
+                        <th style="width:150px;">Aggregator</th>
+                        <th style="width:150px;">Mandate Mode</th>
+                        <th style="width:150px;">Auto Rejected Reason</th>
+                        <th style="width:400px;">HO Acceptance</th>
+                        <th style="width:400px;">Rejection Reason</th>
+                        <th style="width:150px;">Uploaded From</th>
+                        <th style="width:150px;">Mandate Type</th>
+                        <th style="width:150px;">Acc. Holder Name</th>
+                        <th style="width:150px;">Date on Mandate</th>
+                        <th style="width:150px;">EMI Start Date</th>
+                        <th style="width:150px;">Mandate Printed</th>
+                        <th style="width:150px;">Mandate Scan</th>
+                        <th style="width:150px;">Amount</th>
+                        <th style="width:600px;">Amount(In Words)</th>
+                        <th style="width:400px;">Account No.</th>
+                        <th style="width:150px;">IFSC/MICR</th>
+                        <th style="width:150px;">Bank Name</th>
+                        <th style="width:150px;">Frequency</th>
+                        <th style="width:150px;">Debit Type</th>
+                        <th style="width:150px;">Debit To</th>
+                        <th style="width:150px;">SponsorBank Code</th>
+                        <th style="width:150px;">Created By</th>
+                        <th style="width:150px;">Created On</th>
+                        <th style="width:150px;">Last Activity By</th>
+                        <th style="width:150px;">Initiated To Bank</th>
+                        <th style="width:150px;">Phone Number</th>
+                        <th style="width:150px;">Email Id</th>
+                        <th style="width:150px;">Emandate Type</th>
+                        <th style="width:150px;">Activity Id</th>
+                        <th style="width:150px;">Refrence 2</th>
+                        <th style="width:150px;">Error Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Data of BindAllData" (dblclick)="doubleClick(Data)">
+
+                        <td style="width:300px;">{{Data.ParentBankName}}</td>
+                        <td style="width:350px;">{{Data.CorpName}}</td>
+                        <td style="width:150px;">{{Data.ActivityName}}</td>
+
+                        <td style="width:300px;">{{Data.status}}</td>
+                        <td style="width:350px;">{{Data.MandateFreshId}}</td>
+                        <td style="width:150px;">{{Data.Refrence1}}</td>
+                        <td style="width:150px;">{{Data.AcceptRefNo}}</td>
+                        <td style="width:150px;">{{Data.NPCIMsgId}}</td>
+
+                        <td style="width:150px;">{{Data.MSGId}}</td>
+
+                        <td style="width:350px;">{{Data.UMRN}}</td>
+                        <td style="width:150px;">{{Data.AggregatorValue}}</td>
+                        <td style="width:150px;">{{Data.mandateMode}}</td>
+                        <td style="width:150px;">{{Data.AutoRejectReason}}</td>
+
+                        <td style="width:400px;">{{Data.MandateStatus}}</td>
+                        <td style="width:400px;">{{Data.RejectedReason}}</td>
+                        <td style="width:150px;">{{Data.IsMobileData}}</td>
+                        <td style="width:150px;">{{Data.Enach}}</td>
+                        <td style="width:150px;">{{Data.Customer1}}</td>
+                        <td style="width:150px;">{{Data.DateOnMandate}}</td>
+                        <td style="width:150px;">{{Data.FromDate}}</td>
+
+                        <td style="width:150px;">{{Data.IsPrint}}</td>
+                        <td style="width:150px;">{{Data.IsScan}}</td>
+
+                        <td style="width:150px;">{{Data.Amount_Numeric}}</td>
+                        <td style="width:600px;">{{Data.Amount}}</td>
+                        <td style="width:400px;">{{Data.AcNo}}</td>
+                        <td style="width:150px;">{{Data.Code}}</td>
+                        <td style="width:150px;">{{Data.BankName}}</td>
+                        <td style="width:150px;">{{Data.Frequency}}</td>
+                        <td style="width:150px;">{{Data.debittype}}</td>
+                        <td style="width:150px;">{{Data.ToDebit}}</td>
+                        <td style="width:150px;">{{Data.SponsorBankCode}}</td>
+
+                        <td style="width:150px;">{{Data.username}}</td>
+                        <td style="width:150px;">{{Data.CreatedOn}}</td>
+                        <td style="width:150px;">{{Data.UpdatedBy}}</td>
+                        <td style="width:150px;">{{Data.SendToBankDate}}</td>
+                        <td style="width:150px;">{{Data.PhoneNumber}}</td>
+                        <td style="width:150px;">{{Data.EmailId}}</td>
+                        <td style="width:150px;">{{Data.EmandateType}}</td>
+
+
+
+                        <td style="width:150px;">{{Data.ActivityId}}</td>
+                        <td style="width:150px;">{{Data.Reference2}}</td>
+                        <td style="width:150px;">{{Data.NPCIErrorDesc}}</td>
+
+                    </tr>
+                    <tr *ngIf="TotalCount == 0">
+                        <td colspan="3">No Record Found!</td>
+                    </tr>
+                    
+                </tbody>
+
+            </table>
+
+        </div>
+        </form> 
+    </div>
+    </div>
+

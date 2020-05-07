@@ -1,0 +1,199 @@
+<div class="main-content" id="maincontent">
+    <div class="content">
+        <form [formGroup]="UnderProcessMandateForm" autocomplete="off" >
+        <div class="col-md-12 col-sm-6 col-xs-4 contnt-wrapper">
+            <div class="col-sm-6 col-md-6 col-xs-3 no-padding">
+                <span class="legal">UnProcessed Mandates </span>
+            </div>
+            <div class="rightmenu">
+                <div class="toolbar pull-right">
+                    <label>
+                        Total Mandate Count :
+                    </label>
+                    <label id="lblTotalMcont">
+                        <span [innerHTML]="TotalCount"> 0 </span>
+
+                    </label>
+
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="col-sm-12 col-xs-12 col-md-12">
+            <div class="row pl-3 pt-2 ">
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+
+                    <div class="form-group">
+                        <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                            From Date:
+                        </label>
+                        <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                            <!-- <input type="date" class="col-sm-12 col-md-12 col-xs-12" /> -->
+                            <input name="FromDate" type="date" id="" value="{{CurrentDate | date:'yyyy-MM-dd'}}"    class="col-sm-12 col-md-12 col-xs-12 htmldateheight" #FromDate formControlName="FromDate" />  
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                    <div class="form-group">
+                        <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
+                            To Date:
+                        </label>
+                        <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                            <!-- <input type="date" class="col-sm-12 col-md-12 col-xs-12" /> -->
+                            <input name="ToDate" type="date" id="" value="{{CurrentDate | date:'yyyy-MM-dd'}}"    class="col-sm-12 col-md-12 col-xs-12 htmldateheight" #ToDate formControlName="ToDate" /> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                    <div class="form-group">
+                        <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
+                            Bank:
+                        </label>
+                        <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                            <!-- <select class="dropdown col-sm-12 col-md-12 col-xs-">
+                                <option>Select</option>
+                                <option>Bank 1</option>
+                                <option>Bank 2</option>
+                                <option>Bank 3</option>
+                            </select> -->
+                            <select class="dropdown col-sm-12 col-md-12 col-xs-12" formControlName="sponserbankcode" >
+                                <option value="0" selected>Select</option>
+                                <option *ngFor="let data of sponserBank.dataList" value={{data.sponserbankcode}}  >
+                                    {{data.name}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 mt-1">
+            <div class="row pl-3">
+                <div class="col-md-2 col-sm-2 col-xs-2 no-padding">
+                    <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                        <label class="tblHeading">
+                            Mandate File Details:
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-10 col-sm-10 col-xs-10 no-padding filterBox">
+                    <div class="row">
+                        <div class="col-sm-2 col-md-2 col-xs-12">
+
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12 no-padding">
+                            <div class="form-group" style="margin-top:20px!important;">
+                                <label class="col-sm-3 col-md-3 col-xs-3 control-label no-padding" for="form-field-1">
+                                    Corporate:
+                                </label>
+                                <div class="col-sm-9 col-md-9 col-xs-9 no-padding txtField">
+                                    <!-- <select class="dropdown col-sm-11 col-md-11 col-xs-11">
+                                        <option>Select</option>
+                                        <option>Corporate 1</option>
+                                        <option>Corporate 2</option>
+                                        <option>Corporate 3</option>
+                                    </select> -->
+                                    <select class="dropdown col-sm-12 col-md-12 col-xs-12" formControlName="EntityId" >
+                                        <option value="0" selected>Select</option>
+                                        <option *ngFor="let data of corporate.dataList" value={{data.EntityId}}  >
+                                            {{data.Name}}
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-3 col-xs-12 no-padding">
+                            <div class="form-group" style="margin-top:20px!important;">
+                                <label class="col-sm-3 col-md-4 col-xs-3 control-label no-padding" for="form-field-1">
+                                    Reference No.:
+                                </label>
+                                <div class="col-sm-8 col-md-8 col-xs-9 no-padding txtField">
+                                    <!-- <input type="text" class="col-sm-11 col-md-11 col-xs-11" /> -->
+                                    <input type="text" class="col-sm-12 col-md-12 col-xs-12" ng-change="Search(ReferenceNo)"  name="referenceNo" formControlName="ReferenceNo"
+                                placeholder="Reference No"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-sm-3 col-xs-12 no-padding">
+                            <div class="form-group" style="margin-top:20px!important;">
+                                <label class="col-sm-3 col-md-4 col-xs-3 control-label no-padding" for="form-field-1">
+                                    Activity ID:
+                                </label>
+                                <div class="col-sm-8 col-md-8 col-xs-9 no-padding txtField">
+                                    <!-- <input type="text" class="col-sm-11 col-md-11 col-xs-11" /> -->
+                                    <input type="text" class="col-sm-12 col-md-12 col-xs-12" ng-change="Search(ActivityName)"  name="activityName" formControlName="ActivityName"
+                                    placeholder="Activity Name" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1 col-sm-1 col-xs-1 no-padding">
+                            <!-- <input type="button" class="addbtnCSS btn btn-success" value="Search"> -->
+                            <input type="button" class="col-sm-12 col-md-12 col-xs-12y btn btn-primary htmldateheight" value="Search" (click)="SearchFunction(FromDate.value,ToDate.value)" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 no-padding" id="tbldiv">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:150px;"><input type="checkbox" name="all" vaule="all" (click)="toggleSelect($event)">All</th>
+                            <th style="width:150px;">Corporate Name</th>
+                            <th style="width:150px;">Mandate ID</th>
+                            <th style="width:150px;">Customer Name</th>
+                            <th style="width:150px;">Date On Mandate</th>
+                            <th style="width:150px;">Mandate Printed</th>
+                            <th style="width:150px;">Mandate Scan</th>
+                            <th style="width:150px;">Reference</th>
+                            <th style="width:150px;">Amount</th>
+                            <th style="width:150px;">Account No.</th>
+                            <th style="width:150px;">IFSC/MICR</th>
+                            <th style="width:150px;">Bank Name</th>
+                            <th style="width:150px;">Frequency</th>
+                            <th style="width:150px;">Debit Type</th>
+                            <th style="width:150px;">Debit To</th>
+                            <th style="width:150px;">Created on</th>
+
+                            <th style="width:150px;">Created By</th>
+                            <th style="width:150px;">Updated on</th>
+                            <th style="width:150px;">UMRN</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let Data of BindAllData.dataList ; index as i">
+                            <!-- <td style="width:150px;"><input type="checkbox" value="td.selected" [checked]="td.selected" (change)="onChange($event,td); td.selected = !(td.selected)" name="all"></td> -->
+                            <td style="width:150px;">{{Data.CorpName}}</td>
+                            <td style="width:150px;">{{Data.mandateid}}</td>
+                            <td style="width:150px;">{{Data.Customer1}}</td>
+                            <td style="width:150px;">{{Data.DateOnMandate}}</td>
+                            <td style="width:150px;">{{Data.IsPrint}}</td>
+                            <td style="width:150px;">{{Data.IsScan}}</td>
+                            <td style="width:150px;">{{Data.Refrence1}}</td>
+                            <td style="width:150px;">{{Data.Amount}}</td>
+                            <td style="width:150px;">{{Data.AcNo}}</td>
+                            <td style="width:150px;">{{Data.Code}}</td>
+                            <td style="width:150px;">{{Data.BankName}}</td>
+                            <td style="width:150px;">{{Data.Frequency}}</td>
+                            <td style="width:150px;">{{Data.debittype}}</td>
+                            <td style="width:150px;">{{Data.ToDebit}}</td>
+                            <td style="width:150px;">{{Data.createdon}}</td>    
+
+                            <td style="width:150px;">{{Data.CreatedBy}}</td>
+                            <td style="width:150px;">{{Data.updatedon}}</td>
+                            <td style="width:150px;">{{Data.UMRN}}</td>  
+                        </tr>
+                        <tr *ngIf="TotalCount == 0">
+                            <td colspan="3">No Record Found!</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </form> 
+    </div>
+</div>
+
+

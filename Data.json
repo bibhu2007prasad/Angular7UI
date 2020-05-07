@@ -1,0 +1,14 @@
+[
+  {
+    "EmpId": 1,
+    "Name": "Rohit kumar",
+    "Email": "rohit@gmail.com",
+    "Password": "1234"
+  },
+  {
+    "EmpId": 2,
+    "Name": "Demo",
+    "Email": "demo@gmail.com",
+    "Password": "7855"
+  }
+]

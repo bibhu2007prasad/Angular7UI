@@ -1,0 +1,119 @@
+﻿
+.modal {
+    background: rgba(0,0,0,0.6) !important;
+}
+
+    .modal .modal-dialog {
+        margin: 100px auto
+    }
+    .modal .modal-header {
+        background: #efebeb;
+        padding: 8px;
+    }
+    .modal .modal-header .close {
+        position: absolute;
+        right: 9px;
+        top: 0;
+    }
+
+    .modal .modal-header .modal-title {
+        margin: 0 auto
+    }
+    .modal .modal-header h4{
+        text-align: center;
+        color: #003974;
+        font-size: 16px;
+        font-weight: bold;
+    }
+        .modal .modal-header h4 img {
+            display: block;
+            margin: 0 auto;
+        }
+    .modal .modal-body p {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 0px;
+        color: #0c335a;
+        font-weight: bold;
+    }
+
+.panel-default {
+    border: 1px solid #d5d5d5 !important
+}
+.panel-body {
+border-top:0px !important}
+
+body {
+    margin: 0px;
+    padding: 0px
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    table thead {
+        background-color: #7f8a98;
+    }
+
+        table thead tr th {
+            color: #ffffff !important;
+        }
+
+    table tbody tr.active {
+        background: #a7b0bb;
+    }
+
+tr:nth-child(even) {
+    background-color: #e0e2e4;
+}
+
+table thead tr th, table tbody tr td {
+    font-size: 11.5px !important;
+    border: 1px solid #dddddd;
+    padding: 3px 3px;
+}
+
+select.dropdown {
+    height: 24px !important;
+    font-size: 11px !important;
+}
+
+.no-padding {
+    padding: 0px !important
+}
+
+.boxhead {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #e6edf3;
+    border-radius: 4px;
+    background-color: #f1f2f3;
+    padding: 10px 10px;
+}
+
+.form-group label {
+    font-size: 11px !important;
+    margin-bottom: 4px;
+    vertical-align: top;
+    padding-top: 5px !important;
+}
+
+.form-group .txtField {
+    display: inline-block
+}
+
+.form-group input[type=text], .form-group input[type=date] {
+    height: 24px;
+}
+
+.pull-right {
+    float: right
+}
+
+.pull-left {
+    float: left
+}
+#dvLinks ul {
+max-height:550px !important}

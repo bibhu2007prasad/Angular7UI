@@ -1,0 +1,115 @@
+<div class="main-content" id="maincontent">
+    <div class="content">
+        <form [formGroup]="BusinessSegmentFormGroup" autocomplete="off">
+        <div class="col-md-12 col-sm-6 col-xs-4 contnt-wrapper">
+            <div class="col-sm-6 col-md-6 col-xs-3 no-padding">
+                <span class="legal">Business Segment Master</span>
+            </div>
+            <div class="rightmenu">
+                <div class="toolbar pull-right">
+
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="col-sm-12 col-xs-12 col-md-12">
+            <div class="col-sm-12 col-xs-12 col-md-12">
+                <div class="row boxhead">
+                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                        <div class="form-group input-group" [ngClass]="displayFieldCss('BusinessSegmentCode')">
+                        
+                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                Segment Code:
+                            </label>
+                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                <input type="text" required name="Segment code" class="col-sm-12 col-md-12 col-xs-12" formControlName="BusinessSegmentCode"
+                                placeholder="Segment Code" />
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                        <div class="form-group input-group" [ngClass]="displayFieldCss('BusinessSegmentName')">
+                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
+                                Segment Name:
+                            </label>
+                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                <input type="text" required name="Segment name" class="col-sm-12 col-md-12 col-xs-12" formControlName="BusinessSegmentName"
+                                placeholder="Segment Name" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                        <div class="form-group input-group" [ngClass]="displayFieldCss('BusinessSegmentDesc')">
+                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
+                                Description:
+                            </label>
+                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                <textarea required name="description" class="col-sm-12 col-md-12 col-xs-12" formControlName="BusinessSegmentDesc" placeholder="Business Segment Description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-sm-10 col-xs-12 no-padding">
+
+                        <label class="col-md-9 col-sm-12 col-xs-12 no-padding">
+                            <input name="Employee active" formControlName="IsActive" value="" type="checkbox" class="col-md-1 col-sm-2 col-xs-4">
+                            <span class="col-md-4 col-sm-4 col-xs-4 no-padding"> Active</span>
+
+
+                        </label>
+
+                    </div>
+                   
+                    <div class="col-md-2 col-sm-2 col-xs-12  no-padding">
+                        <div class=" col-md-12 pull-right no-padding-right">
+                            <!-- <input type="button" class=" AddbtnCSS btn btn-success" style="padding:0 8px; margin-top: 5px; display:inline-block; margin-right:5px" id="btnsaveholiday" value="Save">
+                            <input type="button" class=" AddbtnCSS btn btn-success" style=" margin-top: 5px; padding:0 8px" id="BtnReset" value="Reset"> -->
+
+                            <button style="width: fit-content;" type="submit" (click)="onSubmit()" class="btn btn-primary btn-block mr-1"> Save</button>
+                            <button [disabled]="buttonDisabledReset" style="width: fit-content;" type="submit" (click)="ResetBusinessSegment();" class="btn btn-primary btn-block mr-1"> Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv">
+            <table>
+                <thead>
+                    <tr>
+                        <!-- <th>Sr No.</th> -->
+                        <th>Segment Code</th>
+                        <th>Segment Name</th>
+                        <th>Segment Description</th>
+                        <th>Created By</th>
+                        <th>Created On</th>
+                        <th>Updated by</th>
+                        <th>Updated on</th>
+                        <th>Active</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of businessSegment.dataList ; index as i" (dblclick)="onRowClicked(data)" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+                        <!--<tr *ngFor="let data of holiday.dataList ; index as i" >-->
+                        <td style="display: none;">{{data.BusinessSegmentID }}</td>
+                        <td>{{data.BusinessSegmentCode }}</td>
+                        <td>{{data.BusinessSegmentName }}</td>
+                        <td>{{data.BusinessSegmentDesc }}</td>
+                        
+
+
+                        <td>{{data.CreatedBy }}</td>
+                        <td>{{data.CreatedOn }}</td>
+                        <td>{{data.UpdatedBy }}</td>
+                        <td>{{data.UpdatedOn }}</td>
+                        <td>{{data.IsActive }}</td>
+                        
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </form>
+    </div>
+</div>

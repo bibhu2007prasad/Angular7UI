@@ -1,0 +1,319 @@
+<div class="main-content" id="maincontent">
+    <div class="content">
+        <div class="col-md-12 col-sm-6 col-xs-4 contnt-wrapper">
+            <div class="col-sm-6 col-md-6 col-xs-3 no-padding">
+                <span class="legal">User</span>
+            </div>
+            <div class="rightmenu">
+                <div class="toolbar pull-right">
+                    <ul class="toolbar-content">
+
+                        <li>
+                            <i class="fa fa-file-text" aria-hidden="true" title="New"></i>
+                            <label>
+                                New
+                            </label>
+                        </li>
+                        <li>
+                            <i class="fa fa-pencil-square-o" aria-hidden="true" title="Edit"></i>
+                            <label>
+                                Edit
+                            </label>
+                        </li>
+                        <li>
+                            <i class="fa fa-floppy-o" aria-hidden="true" title="Save"></i>
+                            <label>
+                                Save
+                            </label>
+                        </li>
+                       
+                        <li>
+                            <i class="fa fa-reply" aria-hidden="true" title="Back"></i>
+                            <label>
+                                Back
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+ 
+        <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv" style="display:block;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sr No.</th>
+                        <th>Parent Bank Name</th>
+                        <th>Corporate Name</th>
+                        <th>User Name</th>
+                        <th>Email Address</th>
+                        <th>Phone Number</th>
+                        <th>Type</th>
+                        <th>Active</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div id="divform" class=" col-md-12 col-sm-12 col-xs-12 no-padding">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="">
+                    <div class="srol">
+                        <div id="accordion1" class="accordion-style1 panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" data-target="#branch">
+                                            <i class="ace-icon fa fa-angle-right bigger-110" data-icon-hide="ace-icon fa fa-angle-down"
+                                               data-icon-show="ace-icon fa fa-angle-right"></i>&nbsp;Single User
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in show" id="branch">
+                                    <div class="panel-body scrolluserpage " style="padding-bottom: 10px; overflow-y: auto;
+                                            max-height: 450px;">
+                                        <div class=" col-sm-12 col-xs-12 col-md-12">
+
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                                            User Type:
+                                                        </label>
+                                                        <div id="User" class="col-sm-7 col-md-7 col-xs-7 no-padding-left radio txtField">
+                                                            <label class="lblradiobtnss col-md-5 col-sm-4 col-xs-6">
+                                                                <input name="rdoNomUser" id="Radio2" value="u" type="radio" />
+                                                                <span>User</span>
+                                                            </label>
+                                                            <label class="lblradiobtnss col-md-6 col-sm-6 col-xs-6">
+                                                                <input name="rdoNomUser" id="Radio1" value="a" type="radio" />
+                                                                <span>Administrator</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class=" col-sm-12 col-xs-12 col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-5 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                                            User ID:
+                                                        </label>
+                                                        <div class="col-sm-7 col-md-7 col-xs-7 no-padding-left txtField">
+                                                            <input type="text" class="col-sm-12 col-md-12 col-xs-12" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 col-sm-8 col-xs-12 no-padding">
+                                                    
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class=" col-sm-12 col-xs-12 col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-5 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                                            Contact No.:
+                                                        </label>
+                                                        <div class="col-sm-7 col-md-7 col-xs-7 no-padding-left txtField">
+                                                            <input type="text" id="txtContactNo" maxlength="10" class="col-sm-12 col-md-12 col-xs-12" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-6 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                                            Email Address:
+                                                        </label>
+                                                        <div class="col-sm-6 col-md-7 col-xs-7 no-padding-left txtField">
+                                                            <input type="text" id="txtEmailId" class="col-sm-12 col-md-12 col-xs-12" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-xs-12  no-padding">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-6 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                                            Email to be sent on:
+                                                        </label>
+                                                        <div class="col-sm-6 col-md-7 col-xs-7 no-padding-left txtField">
+                                                            <input type="text" id="txtEmailSendTo" class="col-sm-12 col-md-12 col-xs-12 " />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" col-sm-12 col-xs-12 col-md-12 no-padding">
+                                            <div class="col-sm-8 col-xs-12 col-md-8">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-md-2 col-xs-4 control-label no-padding" for="form-field-1">
+                                                        Sponsor Bank Code:
+                                                    </label>
+                                                    <div class="col-sm-5 col-md-5 col-xs-5 no-padding-left txtField">
+                                                        <select class="dropdown col-sm-12 col-md-12 col-xs-12">
+                                                            <option>Select</option>
+                                                            <option>001</option>
+                                                            <option>002</option>
+                                                            <option>003</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class=" col-sm-12 col-xs-12 col-md-12 no-padding">
+                                            <div class="col-sm-8 col-xs-12 col-md-8">
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 col-md-2 col-xs-4 control-label no-padding" for="form-field-1">
+                                                        User Role:
+                                                    </label>
+                                                    <div class="col-sm-5 col-md-5 col-xs-5 no-padding-left txtField">
+                                                        <select class="dropdown col-sm-12 col-md-12 col-xs-12">
+                                                            <option>Select</option>
+                                                            <option>Role 1</option>
+                                                            <option>Role 2</option>
+                                                            <option>Role 3</option>
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-xs-3">
+                    <span class=""></span>
+                </div>
+
+
+                <div class="">
+                    <div class="srol">
+                        <div id="Div1" class="accordion-style1 panel-group">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" data-target="#second">
+                                            <i class="ace-icon fa fa-angle-right bigger-110" data-icon-hide="ace-icon fa fa-angle-down"
+                                               data-icon-show="ace-icon fa fa-angle-right"></i>&nbsp;Bulk User
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in" id="second">
+                                    <div class="panel-body scrolluserpage " style="padding-bottom: 10px; overflow-y: auto;
+                                            max-height: 450px;">
+                                        <div class=" col-sm-12 col-xs-12 col-md-12 accordianIcons">
+
+
+                                            <div class="row">
+
+                                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 col-md-3 col-xs-4 control-label no-padding" for="form-field-1">
+                                                            User Type:
+                                                        </label>
+                                                        <div id="dvBulkUserTye" class="col-sm-7 col-md-6 col-xs-7 no-padding-left radio txtField">
+                                                            <label class="lblradiobtnss col-md-5 col-sm-4 col-xs-6">
+                                                                <input name="rdoNomBulkUser" value="U" type="radio" />
+                                                                <span>User</span>
+                                                            </label>
+                                                            <label class="lblradiobtnss col-md-5 col-sm-6 col-xs-6">
+                                                                <input name="rdoNomBulkUser" value="A" type="radio" />
+                                                                <span>Administrator</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class=" col-sm-5 col-xs-12 col-md-5 no-padding">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-2 col-md-4 col-xs-4 control-label no-padding" for="form-field-1">
+                                                            Sponsor Bank Code
+                                                        </label>
+                                                        <div class="col-sm-10 col-md-8 col-xs-7 no-padding-left txtField">
+                                                            <select class="dropdown col-sm-10 col-md-10 col-xs-10">
+                                                                <option>Select</option>
+                                                                <option>Bank 1</option>
+                                                                <option>Bank 2</option>
+                                                                <option>Bank 3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-3 col-sm-6 col-xs-9 no-padding" style="float: right">
+                                                    <button type="button" class="btn btn-success mr-2">
+                                                        <i class="fa fa-upload" aria-hidden="true"></i>
+
+                                                        Upload
+
+                                                    </button>
+                                                    <button type="button" class="btn btn-success">
+                                                        <i class="fa fa-download" aria-hidden="true"></i>
+
+                                                        Download
+
+                                                    </button>
+                                                    <!--<div class="toolbar pull-right">
+        <ul class="toolbar-content">
+            <li id="lblupload" style="display: inline-block;">
+                <i class="fa fa-upload" aria-hidden="true"></i>
+                <label>
+                    Upload
+                </label>
+            </li>
+
+           <li id="btnDownload" style="display: inline-block;">
+                <a style="color: #393939" href="#">
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                    <label>
+                        Download
+                    </label>
+                </a>
+            </li>
+
+        </ul>
+    </div>-->
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+        
+    </div>
+
+                                        
+
+                                    </div>
+                              

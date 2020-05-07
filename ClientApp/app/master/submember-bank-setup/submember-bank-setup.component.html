@@ -1,0 +1,1443 @@
+<div class="main-content" id="maincontent">
+    <div class="content">
+        <div class="col-md-12 col-sm-6 col-xs-4 contnt-wrapper">
+
+            <div class="col-sm-6 col-md-6 col-xs-3 no-padding">
+                <span class="legal">Sub-Member Bank Setup</span>
+            </div>
+            <div class="rightmenu">
+                <div class="toolbar pull-right">
+                    <ul class="toolbar-content">
+                        <li>
+                            <i class="fa fa-file-text" aria-hidden="true" title="New"></i>
+                            <label>
+                                New
+                            </label>
+                        </li>
+                        <li>
+                            <i class="fa fa-pencil-square-o" aria-hidden="true" title="Edit"></i>
+                            <label>
+                                Edit
+                            </label>
+                        </li>
+                        <li>
+                            <i class="fa fa-floppy-o" aria-hidden="true" title="Save"></i>
+                            <label>
+                                Save
+                            </label>
+                        </li>
+                        <li>
+                            <i class="fa fa-times" aria-hidden="true" title="Delete"></i>
+                            <label>
+                                Delete
+                            </label>
+                        </li>
+                        <li>
+                            <i class="fa fa-reply" aria-hidden="true" title="Back"></i>
+                            <label>
+                                Back
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12" style="display:none;">
+            <button type="button" class="col-md-1 col-sm-12 col-xs-12" style=" background-color: #203c61; border: none;color: #fff;border-radius: 4px;padding: 4px; position: relative;font-size: 10px;
+    font-weight: bold;
+    top:25px;">
+                Export to Excel
+            </button>
+
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv" style="margin-top: 3%;display:none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>All</th>
+                        <th>Sr No.</th>
+                        <th>Parent Bank Name</th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Sponsor Bank Name</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Demo</td>
+                        <td>Demo</td>
+                        <td>Demo</td>
+                        <td>Demo</td>
+                        <td>Demo</td>
+                        <td>Demo</td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div id="divform" class=" col-md-12 col-sm-12 col-xs-12 no-padding" style="display: block;">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="">
+                    <div class="srol">
+
+                        <div id="accordion1" class="accordion-style1 panel-group">
+                            <div class="panel panel-default" style="display:block;">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" data-target="#legaldetail">
+                                            <i class="fa fa-angle-right bigger-110"></i>&nbsp; Legal Details
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in show" id="legaldetail">
+                                    <div class="panel-body p-2">
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-3 col-xs-12" style="border-right: 1px solid #e5e4e4; padding-left: 25px;">
+                                                <div class="address col-md-12 col-sm-12 col-xs-12 no-padding">
+                                                    <label class="add" id="lblCAddress">
+                                                        Corporate:
+                                                    </label>
+                                                </div>
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Code:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="Required" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Corporate Name:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="Required" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Primary Business Code:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <select class="dropdown col-sm-12 col-md-12 col-xs-12">
+                                                            <option>Code 1</option>
+                                                            <option>Code 2</option>
+                                                            <option>Code 3</option>
+
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" style="vertical-align: top;">
+                                                        Logo:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <div class="logo-img">
+                                                            <img src="../../ClientApp/assets/images/default_logo.png" alt="" id="LogoImg" />
+                                                        </div>
+                                                        <div class="" id="image-upload">
+                                                            <label for="FileUpload">
+                                                                Browse Img
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12" style="border-right: 1px solid #e5e4e4;">
+                                                <div class="address col-md-12 col-sm-12 col-xs-12 no-padding">
+                                                    <label class="add" id="Label1">
+                                                        Contact Person Detail
+                                                    </label>
+                                                </div>
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Name:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        E-Mail:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Mobile No.:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                            <div class="col-md-5 col-sm-6 col-xs-12">
+                                                <div class="address col-md-12 col-sm-12 col-xs-12 no-padding">
+                                                    <label class="add" id="Label2">
+                                                        Address
+                                                    </label>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        <div class="form-group input-group">
+                                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" style="vertical-align: top;">
+                                                                Address:
+                                                            </label>
+                                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                                <textarea cols="20" rows="2" class="col-sm-12 col-md-12 col-xs-12"></textarea>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group input-group">
+                                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                                Country:
+                                                            </label>
+                                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                                <select class="dropdown col-sm-12 col-md-12 col-xs-">
+                                                                    <option>Country 1</option>
+                                                                    <option>Country 2</option>
+                                                                    <option>Country 3</option>
+
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        <div class="form-group input-group">
+                                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                                State:
+                                                            </label>
+                                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                                <select class="dropdown col-sm-12 col-md-12 col-xs-">
+                                                                    <option>State 1</option>
+                                                                    <option>State 2</option>
+                                                                    <option>State 3</option>
+
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group input-group">
+                                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                                City:
+                                                            </label>
+                                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                                <select class="dropdown col-sm-12 col-md-12 col-xs-">
+                                                                    <option>City 1</option>
+                                                                    <option>City 2</option>
+                                                                    <option>City 3</option>
+
+                                                                </select>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-group input-group">
+                                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                                PIN Code:
+                                                            </label>
+                                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                                <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                            </div>
+                                                        </div>
+
+
+                                                        <div class="form-group" id="divregion" style="display:none">
+                                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding-right" for="form-field-2">
+                                                                Region:
+                                                            </label>
+
+                                                            <label class="col-sm-8 col-md-8 col-xs-7 no-padding" id="lblregion"></label>
+
+                                                        </div>
+
+
+
+                                                        <div class="col-md-9 col-md-offset-3 ">
+                                                            <label id="lblmsg" class="status-lbl" style="display: none;">
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="accordion2" class="accordion-style1 panel-group">
+                            <div class="panel panel-default" style="display:block;">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" data-target="#mandatedetail">
+                                            <i class="fa fa-angle-right bigger-110"></i>&nbsp; Mandate Details
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in" id="mandatedetail">
+                                    <div class="panel-body p-2">
+                                        <div class=" DivAllDimensionDetails  col-md-12 col-sm-12 col-xs-12">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding-left">
+                                                        <div class="form-group input-group">
+                                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                                Sponsor Bank Name:
+                                                            </label>
+                                                            <div class="col-sm-7 col-md-8 col-xs-7 no-padding txtField">
+                                                                <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding-left">
+                                                        <div class="form-group input-group">
+                                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                                Sponsor Bank Code:
+                                                            </label>
+                                                            <div class="col-sm-7 col-md-8 col-xs-7 no-padding txtField">
+                                                                <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                                                        <div class="form-group input-group">
+                                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                                Utility Code:
+                                                            </label>
+                                                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                                <select class="dropdown col-sm-12 col-md-12 col-xs-12">
+                                                                    <option>Select </option>
+                                                                    <option>Code 1</option>
+                                                                    <option>Code 2</option>
+
+                                                                </select>
+                                                            </div>
+                                                            <span class="addUtility" (click)="onClick($event)"><i class="fa fa-plus-circle"></i></span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding-left">
+                                                        <div class="form-group input-group">
+                                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                                IFSC:
+                                                            </label>
+                                                            <div class="col-sm-7 col-md-8 col-xs-7 no-padding txtField">
+                                                                <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding-left">
+                                                        <div class="form-group input-group">
+                                                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                                Account Number:
+                                                            </label>
+                                                            <div class="col-sm-7 col-md-8 col-xs-7 no-padding txtField">
+                                                                <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding-left">
+
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding-left">
+
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-4 col-xs-12 pull-right  no-padding">
+                                                        <div class="form-group col-md-3 no-padding pull-right" style="float: right;">
+                                                            <div class="AddbtnDimensionDetail col-md-10 pull-right ">
+                                                                <input type="button" class=" pull-right AddbtnCSS col-md-12 btn btn-success"
+                                                                       value="Add" style="font-size: 12px; height: 24px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                                                <div id="DivSponsorBankCodeFiles">
+                                                    <!--<div class="form-group">
+                                                        <label class="col-sm-1 col-md-1 col-xs-4 control-label no-padding" for="form-field-1">
+                                                            Sponsor Code
+                                                        </label>
+                                                        <div class="col-sm-11 col-md-11 col-xs-8 no-padding spDiv">
+                                                            <input type="text" id="Text1" class="" placeholder="File Name 1" />
+                                                            <input type="text" id="Text2" class="" placeholder="File Name 2" />
+                                                            <input type="text" id="Text3" class="" placeholder="File Name 3" />
+                                                            <input type="text" id="Text4" class="" placeholder="File Name 4" />
+                                                            <input type="text" id="Text5" class="" placeholder="File Name 5" />
+                                                            <input type="text" id="Text6" class="" placeholder="File Name 6" />
+                                                        </div>
+                                                    </div>-->
+                                                </div>
+                                            </div>
+                                            <!--<div class="backgroundprojclass panelbdybelowDiv4 col-sm-12 col-xs-12 col-md-12 no-padding"
+                                                           style="margin-top: 1%;">
+                                                <div class=" DivForPadin col-md-2 col-sm-12 col-xs-12 no-padding">
+                                                    <div class="">
+                                                        <label class="col-sm-4 col-md-6 col-xs-3 control-label no-padding" for="form-field-1"
+                                                               style="font-weight: bold;">
+                                                            Utility Code
+                                                        </label>
+                                                        <div class="col-sm-8 col-md-6 col-xs-9 no-padding-left">
+                                                            <input type="text" class="col-sm-12 col-md-12 col-xs-12" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class=" col-md-10 col-sm-10 col-xs-12 ">
+                                                    <div class="SubProjPanelDiv">
+                                                        <table id="tblUtilityCode" class="DimensionTable table table-striped table-hover">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td class="CCtexTextareaHighlight"></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>-->
+                                            <div class="row" style="top: 2px;">
+                                                <div class="col-md-4 col-sm-4 col-xs-12" style="border-right: 1px solid #cdcdcd;">
+                                                    <div class="form-group input-group">
+                                                        <label class="col-sm-4 col-md-6 col-xs-4 control-label no-padding" style="vertical-align: top;">
+                                                            To Debit:
+                                                        </label>
+                                                        <div class="col-sm-7 col-md-6 col-xs-7 no-padding txtField">
+                                                            <div class="row">
+                                                                <div class="lblradiobtnss col-md-6 col-sm-6 col-xs-7 no-padding">
+                                                                    <input name="rdoNomGender" value="sb" type="radio" />
+                                                                    <label class="pl-1">
+                                                                        <input class="entityCheck" name="overprint" value="checkbox" type="checkbox" />
+                                                                        <span style="vertical-align: top">SB</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="lblradiobtnss col-md-6 col-sm-6 col-xs-5 no-padding">
+                                                                    <input name="rdoNomGender" value="ca" type="radio" />
+                                                                    <label class="pl-1">
+                                                                        <input class="entityCheck" name="overprint"
+                                                                               value="checkbox" type="checkbox" />
+                                                                        <span style="vertical-align: top">CA</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="lblradiobtnss col-md-6 col-sm-6 col-xs-7 no-padding">
+                                                                    <input name="rdoNomGender" value="cc" type="radio" />
+                                                                    <label class="pl-1">
+                                                                        <input class="entityCheck" name="overprint" id="Checkbox2"
+                                                                               value="checkbox" type="checkbox" />
+                                                                        <span style="vertical-align: top">CC</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="lblradiobtnss col-md-6 col-sm-6 col-xs-5 no-padding">
+                                                                    <input name="rdoNomGender" value="re" type="radio" />
+                                                                    <label class="pl-1">
+                                                                        <input class="entityCheck" name="overprint"
+                                                                               value="checkbox" type="checkbox" />
+                                                                        <span style="vertical-align: top">SB-NRE</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="lblradiobtnss col-md-6 col-sm-6 col-xs-7 no-padding">
+                                                                    <input name="rdoNomGender" value="rd" type="radio" />
+                                                                    <label class="pl-1">
+                                                                        <input class="entityCheck" name="overprint"
+                                                                               value="checkbox" type="checkbox" />
+                                                                        <span style="vertical-align: top">SB-NRO</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="lblradiobtnss col-md-6 col-sm-6 col-xs-5 no-padding">
+                                                                    <input name="rdoNomGender" value="ot" type="radio" />
+                                                                    <label class="pl-1">
+                                                                        <input class="entityCheck" name="overprint"
+                                                                               value="checkbox" type="checkbox" />
+                                                                        <span style="vertical-align: top">Other</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-xs-12" style="border-right: 1px solid #cdcdcd;">
+                                                    <div class="form-group input-group">
+                                                        <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" style="vertical-align: top;">
+                                                            Frequency:
+                                                        </label>
+                                                        <div class="col-sm-7 col-md-8 col-xs-7 no-padding txtField">
+                                                            <div class="row">
+                                                                <div class="lblradiobtnss col-md-7 col-sm-6 col-xs-7 no-padding ">
+                                                                    <input name="rdoNomFrequency" value="m" type="radio" />
+                                                                    <label class="pl-1">
+                                                                        <input class="entityCheck" name="overprint"
+                                                                               value="checkbox" type="checkbox" />
+                                                                        <span style="vertical-align: top">Monthly</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="lblradiobtnss col-md-5 col-sm-6 col-xs-5 no-padding">
+                                                                    <input name="rdoNomFrequency" value="q" type="radio" />
+                                                                    <label class="pl-1">
+                                                                        <input class="entityCheck" name="overprint"
+                                                                               value="checkbox" type="checkbox" />
+                                                                        <span style="vertical-align: top">Quarterly</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="lblradiobtnss col-md-7 col-sm-6 col-xs-7 no-padding" style="padding-right: 0;">
+                                                                    <input name="rdoNomFrequency" value="h" type="radio" />
+                                                                    <label class="pl-1">
+                                                                        <input class="entityCheck" name="overprint"
+                                                                               value="checkbox" type="checkbox" />
+                                                                        <span style="vertical-align: top">Half-Yearly</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="lblradiobtnss col-md-5 col-sm-6 col-xs-5 no-padding">
+                                                                    <input name="rdoNomFrequency" value="y" type="radio" />
+                                                                    <label class="pl-1">
+                                                                        <input class="entityCheck" name="overprint"
+                                                                               value="checkbox" type="checkbox" />
+                                                                        <span style="vertical-align: top">Yearly</span>
+                                                                    </label>
+                                                                </div>
+                                                                <div class="lblradiobtnss col-md-12 col-sm-12 col-xs-12 no-padding">
+                                                                    <input name="rdoNomFrequency" value="a" type="radio" />
+                                                                    <label class="pl-1">
+                                                                        <input class="entityCheck" onclick="chkradio(this)" name="overprint" id="Checkbox11"
+                                                                               value="checkbox" type="checkbox" />
+                                                                        <span style="vertical-align: top">As &amp; When Presented</span>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="form-group input-group">
+                                                        <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" style="vertical-align: top;">
+                                                            Debit Type:
+                                                        </label>
+                                                        <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                            <div class="lblradiobtnss col-md-12 col-sm-12 col-xs-12 no-padding">
+                                                                <input name="rdoNomDebit" value="f" type="radio" />
+                                                                <label class="pl-1">
+                                                                    <input class="entityCheck" name="overprint"
+                                                                           value="checkbox" type="checkbox" />
+                                                                    <span style="vertical-align: top">Fixed Amount</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="lblradiobtnss col-md-12 col-sm-12 col-xs-12 no-padding">
+                                                                <input name="rdoNomDebit" value="m" type="radio" />
+                                                                <label class="pl-1">
+                                                                    <input class="entityCheck" name="overprint"
+                                                                           value="checkbox" type="checkbox" />
+                                                                    <span style="vertical-align: top">Maximum Amount</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                                    <div class="form-group input-group">
+                                                        <label class="col-sm-4 col-md-5 col-xs-4 control-label no-padding" style="vertical-align:top;">
+                                                            Period Enabled on Mandate:
+                                                        </label>
+                                                        <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                            <div class="lblradiobtnss col-md-12 col-sm-12 col-xs-12">
+                                                                <input name="rdoPeriod" value="t" type="radio" />
+                                                                <label class="pl-1">
+                                                                    <input class="entityCheck" name="overprint"
+                                                                           value="checkbox" type="checkbox" />
+                                                                    <span style="vertical-align: top">To</span>
+                                                                </label>
+                                                            </div>
+                                                            <div class="lblradiobtnss col-md-12 col-sm-12 col-xs-12 no-padding-right">
+                                                                <input name="rdoPeriod" value="u" type="radio" />
+                                                                <label class="pl-1">
+                                                                    <input class="entityCheck" name="overprint" id="Checkbox15"
+                                                                           value="checkbox" type="checkbox" />
+                                                                    <span style="vertical-align: top">Until Cancelled</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 col-sm-6 col-xs-12 no-padding" style="display: none">
+                                                    <div class="form-group input-group">
+                                                        <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                            Instructing Member ID:
+                                                        </label>
+                                                        <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                            <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="accordion3" class="accordion-style1 panel-group">
+                            <div class="panel panel-default" style="display:block;">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" data-target="#specialFeatures">
+                                            <i class="fa fa-angle-right bigger-110"></i>&nbsp; Special Features
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in" id="specialFeatures">
+                                    <div class="panel-body p-2">
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="col-md-12 col-sm-12 col-xs-12 no-padding pull-left">
+                                                    <label class="col-md-9 col-sm-12 col-xs-12 no-padding">
+                                                        <input name="overprint" value="Cheque" type="checkbox" />
+                                                        <span>Allow E-Mandate</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                                <div class="col-md-12 col-sm-12 col-xs-12 no-padding pull-left">
+                                                    <label class="col-md-9 col-sm-12 col-xs-12 no-padding">
+                                                        <input name="overprint" value="Cheque" type="checkbox" />
+                                                        <span>Allow Physical Mandate</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-12 col-xs-12 pull-left">
+
+                                            </div>
+                                            <div class="col-md-3 col-sm-12 col-xs-12 pull-left">
+
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-6">
+
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-6">
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                                <div class="col-md-12 col-sm-12 col-xs-12 no-padding pull-left">
+                                                    <label class="col-md-9 col-sm-12 col-xs-12 no-padding">
+                                                        <input name="overprint" value="Cheque" type="checkbox" />
+                                                        <span>Allow Account Validation</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-sm-6 col-xs-12">
+                                                <div class="col-md-8 col-sm-6 col-xs-6 no-padding">
+                                                    <label class="lblradiobtnss col-md-6 col-sm-6 col-xs-12 no-padding">
+                                                        <input name="rdoQRLogo" value="1" type="radio" />
+                                                        <span>QR Code</span>
+                                                    </label>
+                                                    <label class="lblradiobtnss col-md-6 col-sm-3 col-xs-12 no-padding">
+                                                        <input name="rdoQRLogo" value="2" type="radio" />
+                                                        <span>Logo</span>
+                                                    </label>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-12 col-xs-12 pull-left">
+                                                <label class="col-md-8 col-sm-12 col-xs-12 no-padding">
+                                                    <input name="Validate" value="Validate" type="checkbox" />
+                                                    <span>Phone Number</span>
+                                                </label>
+                                            </div>
+                                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                                <div class="col-md-12 col-sm-12 col-xs-12 no-padding pull-left">
+                                                    <label class="col-md-10 col-sm-12 col-xs-12 no-padding">
+                                                        <input name="email" value="email" type="checkbox" />
+                                                        <span>E-mail ID</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+
+                                            <div class="col-md-3 col-sm-3 col-xs-6">
+                                                <div class="col-md-12 col-sm-12 col-xs-12 no-padding pull-left">
+                                                    <label class="col-md-10 col-sm-12 col-xs-12 no-padding">
+                                                        <input name="email" value="email" type="checkbox" />
+                                                        <span>Enable NACH Presentment</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div id="accordion4" class="accordion-style1 panel-group">
+                            <div class="panel panel-default" style="display:block;">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion4" data-target="#userDetails">
+                                            <i class="fa fa-angle-right bigger-110"></i>&nbsp; User Details
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in" id="userDetails">
+                                    <div class="panel-body p-2">
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-3 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        User Name:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-8 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="col-md-4 col-sm-3 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Password:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-8 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="password">
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                            <div class="col-md-4 col-sm-5 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Confirm Password
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-8 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="password">
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="accordion5" class="accordion-style1 panel-group">
+                            <div class="panel panel-default" style="display:block;">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion5" data-target="#txnPresentment">
+                                            <i class="fa fa-angle-right bigger-110"></i>&nbsp; NACH Transaction Presentment
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in" id="txnPresentment">
+                                    <div class="panel-body p-2">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Would checker require to recheck the presentment file:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-1 col-xs-7 no-padding txtField" style="margin-left: -39px;">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12" style="display:none;">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Should presentment file be processed if checker does not recheck:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <label class="lblradiobtnss col-md-2 col-sm-2 col-xs-5 no-padding">
+                                                            <input name="rdoCheck" value="1" type="radio" />
+                                                            <span>Yes</span>
+                                                        </label>
+                                                        <label class="lblradiobtnss col-md-3 col-sm-5 col-xs-4 no-padding">
+                                                            <input name="rdoCheck" value="2" type="radio" />
+                                                            <span>No</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="accordion6" class="accordion-style1 panel-group">
+                            <div class="panel panel-default" style="display:block;">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion6" data-target="#businessCode">
+                                            <i class="fa fa-angle-right bigger-110"></i>&nbsp; Additional Business Code
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in" id="businessCode">
+                                    <div class="panel-body p-2">
+                                        <div class=" col-sm-12 col-xs-12 col-md-12 no-padding">
+                                            <div class="form-group input-group">
+                                                <label class="col-sm-4 col-md-2 col-xs-4 control-label no-padding">
+                                                    NACH  Business Code:
+                                                </label>
+                                                <div class="col-sm-7 col-md-8 col-xs-7 no-padding txtField">
+                                                    <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="form-group input-group">
+                                                <label class="col-sm-4 col-md-2 col-xs-4 control-label no-padding">
+                                                    Business Segment:
+                                                </label>
+                                                <div class="col-sm-7 col-md-8 col-xs-7 no-padding txtField">
+                                                    <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="accordion7" class="accordion-style1 panel-group">
+                            <div class="panel panel-default" style="display:block;">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion7" data-target="#financialDetails">
+                                            <i class="fa fa-angle-right bigger-110"></i>&nbsp; Financial/Billing Details
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in" id="financialDetails">
+                                    <div class="panel-body p-2">
+
+                                        <div class="col-sm-12 col-md-12 col-xs-2 no-padding">
+                                            <span class="credentialsheading">Contact Person Details</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Name:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Designation:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Contact No.:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Fax No.:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" style="vertical-align:top;">
+                                                        Address.:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <textarea class="col-sm-12 col-md-12 col-xs-12"></textarea>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12 pull-right">
+                                                <div class="form-group col-md-3 no-padding pull-right" style="  margin-right: 17px;">
+                                                    <div class="AddbtnDimensionDetail col-md-10 pull-right " style="float:right;">
+                                                        <input type="button" class=" pull-right AddbtnCSS col-md-12 btn btn-success" value="Add" style="font-size: 12px; height: 24px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12 onplusclick">
+                                                <table id="tblcontactpersondetail" class="DimensionTable table table-striped table-hover">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="CCtexTextareaHighlight"></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-xs-2 no-padding">
+                                            <span class="credentialsheading">Financial Details</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        PAN:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        TAN:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        GST:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-xs-2 no-padding">
+                                            <span class="credentialsheading">Account Handling Details</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Regional Manager:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        PSM:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-xs-2 no-padding">
+                                            <span class="credentialsheading">Billing Details</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Billing Contact Person:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Designation:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Contact No.:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4 col-xs-12 ">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Fax No:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" style="vertical-align:top;">
+                                                        Billing Address:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <textarea class="col-sm-12 col-md-12 col-xs-12"></textarea>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Pickup Contact Person:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" style="vertical-align:top;">
+                                                        Pickup Location Address:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <textarea class="col-sm-12 col-md-12 col-xs-12"></textarea>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Arrangment In Days (Clear In):
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <select class="dropdown col-sm-12 col-md-12 col-xs-12">
+                                                            <option>Select </option>
+                                                            <option>Day 1</option>
+                                                            <option>Day 2</option>
+
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Communication Mail (Primary):
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Communication Mail (Billing):
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                            <div class="col-md-12 col-sm-12 col-xs-12 no-padding onplusclick" id="divbillingmail"
+                                                 style="display: none;">
+                                                <table id="Table2" class="DimensionTable table table-striped table-hover">
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="CCtexTextareaHighlight">
+                                                                <!--<div class="flexiblewidth">
+                                                                    <label id="l" class="control-label no-padding">
+                                                                        1
+                                                                    </label>
+                                                                    <span class="crossimgDiv">
+                                                                        <img src="../images/cross.png" id="lnkremoveEmail" class="crosswidth no-padding" />
+                                                                    </span>
+                                                                </div>
+                                                                <div class="flexiblewidth">
+                                                                    <label id="2" class="control-label no-padding">
+                                                                        2
+                                                                    </label>
+                                                                    <span class="crossimgDiv">
+                                                                        <img src="../images/cross.png" id="Img1" class="crosswidth no-padding" />
+                                                                    </span>
+                                                                </div>
+                                                                <div class="flexiblewidth">
+                                                                    <label id="3" class="control-label no-padding">
+                                                                        3
+                                                                    </label>
+                                                                    <span class="crossimgDiv">
+                                                                        <img src="../images/cross.png" id="Img2" class="crosswidth no-padding" />
+                                                                    </span>
+                                                                </div>-->
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-12 col-md-12 col-xs-2 no-padding">
+                                            <span class="credentialsheading">Other Details</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Charge Debit Acc No.:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Bank's Corp ID:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+
+
+
+
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12 ">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Branch Name:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Branch Code:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        IFSC:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4 col-sm-4 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                                        Settlement:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="accordion8" class="accordion-style1 panel-group">
+                            <div class="panel panel-default" style="display:block;">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion8" data-target="#h2hDeatails">
+                                            <i class="fa fa-angle-right bigger-110"></i>&nbsp; H2H Details
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in" id="h2hDeatails">
+                                    <div class="panel-body p-2">
+                                        <div class=" row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="form-group input-group">
+                                                    <label class="col-sm-4 col-md-1 col-xs-4 control-label no-padding">
+                                                        Is Required:
+                                                    </label>
+                                                    <div class="col-sm-7 col-md-1 col-xs-7 no-padding txtField">
+                                                        <input class="col-sm-12 col-md-12 col-xs-12" placeholder="" type="checkbox">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="h2hDetails" style="display: none;">
+                                                <div class="col-md-6 col-sm-4 col-xs-12 no-padding">
+                                                    <div class="form-group">
+                                                        <label id="Label9" class="col-sm-4 col-md-4 col-xs-4 control-label no-padding-right financelabelpan">
+                                                            IP:
+                                                        </label>
+                                                        <div class="col-sm-7 col-md-7 col-xs-5 no-padding">
+                                                            <input type="text" class="col-sm-12 col-md-12 col-xs-12" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-sm-4 col-xs-12 no-padding">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding-right financelabelpan"
+                                                               for="form-field-2">
+                                                            URL:
+                                                        </label>
+                                                        <div class="col-sm-7 col-md-7 col-xs-5 no-padding">
+                                                            <input type="text" class="col-sm-12 col-md-12 col-xs-12" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-4 col-md-12 col-xs-2 no-padding-right">
+                                                    <span class="credentialsheading">Credentials</span>
+                                                </div>
+                                                <div class="col-md-6 col-sm-4 col-xs-12 no-padding">
+                                                    <div class="form-group">
+                                                        <label id="Label12" class="col-sm-4 col-md-4 col-xs-4 control-label no-padding-right financelabelpan">
+                                                            User Name:
+                                                        </label>
+                                                        <div class="col-sm-7 col-md-7 col-xs-5 no-padding">
+                                                            <input type="text" class="col-sm-12 col-md-12 col-xs-12" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 col-sm-4 col-xs-12 no-padding">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding-right financelabelpan"
+                                                               for="form-field-2">
+                                                            Password:
+                                                        </label>
+                                                        <div class="col-sm-7 col-md-7 col-xs-5 no-padding">
+                                                            <input type="password" class="col-sm-12 col-md-12 col-xs-12"
+                                                                   style="height: 22px" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="accordion9" class="accordion-style1 panel-group">
+                            <div class="panel panel-default" style="display:block;">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion9" data-target="#document">
+                                            <i class="fa fa-angle-right bigger-110"></i>&nbsp; Document
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div class="panel-collapse collapse in" id="document">
+                                    <div class="panel-body p-2">
+                                        <div class="col-md-6 col-sm-6 col-xs-6">
+                                            <div class="form-group">
+                                                <label class="col-md-3" style="font-weight: bold;font-size: 13px">Document 1:</label>
+                                                <label class="col-md-3" style="text-decoration: underline;">Upload Image</label>
+                                                <input type="file" style="position: absolute;left: 28%;opacity: 0;width: 14%;" />
+                                                <div class="col-md-6 col-sm-6 col-xs-6 txtField">
+                                                    <div class="imgshow">
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 col-sm-6 col-xs-6 txtField">
+                                            <div class="form-group">
+                                                <label class="col-md-3" style="font-weight: bold;font-size: 13px">Document 2:</label>
+                                                <label class="col-md-3" style="text-decoration: underline;">Upload Image</label>
+                                                <input type="file" style="position: absolute;left: 28%;opacity: 0;width: 14%;" />
+                                                <div class="col-md-6 col-sm-6 col-xs-6 txtField">
+                                                    <div class="imgshow">
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    
+</div>
+
+<div class="modal" id="createUtility" [style.display]="showModal ? 'block' : 'none'">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">
+                    Utility Code Creation
+                </h4>
+                <button type="button" class="close" data-dismiss="modal" (click)="hide()">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div class="col-md-12 col-sm-12 col-xs-12 no-padding">
+                    <div class="col-sm-12 col-xs-12 col-md-12">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group">
+                                    <div class="row">
+                                        <label class="col-sm-3 col-md-3 col-xs-3 control-label">
+                                            Utility Code:
+                                        </label>
+                                        <div class="col-sm-8 col-md-8 col-xs-8 no-padding">
+                                            <input type="text" class="col-sm-12 col-md-12 col-xs-12" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" (click)="hide()">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

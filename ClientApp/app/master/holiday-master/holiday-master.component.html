@@ -1,0 +1,94 @@
+<div class="main-content" id="maincontent">
+    <div class="content">
+        <form [formGroup]="HolidayForm" autocomplete="off">
+            <div class="col-md-12 col-sm-6 col-xs-4 contnt-wrapper">
+                <div class="col-sm-6 col-md-6 col-xs-3 no-padding">
+                    <span class="legal">Holiday Master</span>
+                </div>
+                <div class="rightmenu">
+                    <div class="toolbar pull-right">
+
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="col-sm-12 col-xs-12 col-md-12">
+                <div class="col-sm-12 col-xs-12 col-md-12">
+                    <div class="row boxhead">
+                        <div class="col-md-5 col-sm-5 col-xs-12 no-padding">
+                            <!--<div *ngIf="sucess" style="font-size: medium;font-weight: bold;color: red; " role="alert">Your Form is Valid</div>-->
+                            <div class="form-group input-group" >
+                                <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                    Name of the Holiday:
+                                </label>
+                                <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                    <input required name="Holidayname" class="col-sm-12 col-md-12 col-xs-12" formControlName="HolidayName"
+                                           placeholder="Holiday name" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-sm-5 col-xs-12 no-padding">
+                            <div class="form-group input-group" >
+                                <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
+                                    Date:
+                                </label>
+                                <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                    <!--<input type="date" class="col-sm-12 col-md-12 col-xs-12 " placeholder="Select Date " />-->
+                                    <input  class="col-sm-12 col-md-12 col-xs-12 " formControlName="HolidayDate" [ngModel]="today | date:'yyyy-MM-dd'"   placeholder="Select Date" type="date">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-2 col-xs-12 no-padding">
+                            <div class=" col-md-12 pull-right no-padding">
+                                <!--<input type="button" class=" AddbtnCSS btn btn-success" style="padding:0 8px; margin-top: 5px; display:inline-block; margin-right:5px" id="btnsaveholiday" value="Save">
+    <input type="button" class=" AddbtnCSS btn btn-success" style="padding:0 8px; margin-top: 5px; display:inline-block; margin-right:5px" id="BtnDelete" value="Delete" disabled="disabled">
+    <input type="button" class=" AddbtnCSS btn btn-success" style=" margin-top: 5px; padding:0 8px" id="BtnReset" value="Reset">-->
+                                <button style="width: fit-content;" type="submit" (click)="onSubmit()" class="btn btn-primary btn-block mr-1"> Save</button>
+                                <button [disabled]="buttonDisabledReset" style="width: fit-content;" type="submit" (click)="ResetHoliday();" class="btn btn-primary btn-block mr-1"> Reset</button>
+                                <button [disabled]="buttonDisabledDelete" style="width: fit-content;" type="submit" (click)="DeleteHoliday();" class="btn btn-primary btn-block"> Delete</button>
+
+                                <!--<div class="form-group input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"> <button style="width: fit-content;" type="submit" (click)="onSubmit()" class="btn btn-primary btn-block"> Save</button> </span>
+                                    </div>
+
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">  <button [disabled]="buttonDisabledReset" style="width: fit-content;" type="submit" (click)="reset();" class="btn btn-primary btn-block"> Reset</button> </span>
+                                    </div>
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">  <button [disabled]="buttonDisabledDelete" style="width: fit-content;" type="submit" (click)="deleteEmp();" class="btn btn-primary btn-block"> Delete</button> </span>
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv" *ngIf="Show">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="display: none;"></th>
+                            <th>Sr No.</th>
+                            <th>Name of the Holiday</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of holiday.dataList ; index as i" (dblclick)="onRowClicked(data)" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+                        <!--<tr *ngFor="let data of holiday.dataList ; index as i" >-->
+                            <td style="display: none;">{{data.HolidayID }}</td>
+                            <td>{{data.Sno }}</td>
+                            <td>{{data.HolidayName }}</td>
+                            <td>{{data.HolidayDate }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+         </form>
+    </div>
+  </div>
+
+      

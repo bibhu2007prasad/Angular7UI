@@ -1,0 +1,107 @@
+<div class="main-content" id="maincontent">
+    <div class="content">
+        <form [formGroup]="DesignationForm" autocomplete="off">
+            <div class="col-md-12 col-sm-6 col-xs-4 contnt-wrapper">
+                <div class="col-sm-6 col-md-6 col-xs-3 no-padding">
+                    <span class="legal">Designation Master</span>
+                </div>
+                <div class="rightmenu">
+                    <div class="toolbar pull-right">
+
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="col-sm-12 col-xs-12 col-md-12">
+                <div class="col-sm-12 col-xs-12 col-md-12">
+                    <div class="row boxhead">
+                        <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+
+                            <div class="form-group input-group" >
+                                <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                                    Designation Code1:
+                                </label>
+                                <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                    <input type="text" disabled="textBoxDesignationCode"  name="Designation code" class="col-sm-12 col-md-12 col-xs-12" formControlName="DesignationCode"
+                                           placeholder="Designation Code"  />
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                            <div class="form-group input-group" [ngClass]="displayFieldCss('DesignationName')">
+                                <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
+                                    Designation Name:
+                                </label>
+                                <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                                    <input type="text" required name="Designation name" class="col-sm-12 col-md-12 col-xs-12" formControlName="DesignationName"
+                                           placeholder="Designation Name" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12 no-padding">
+
+                            <label class="col-md-9 col-sm-12 col-xs-12 no-padding">
+                                <input name="Designation active" formControlName="IsActive"  value="1" type="checkbox" class="col-md-1 col-sm-2 col-xs-4">
+                                <!--<input type="checkbox" name="HolidayActive" [ngModel]="user.isActive" required #tc="ngModel">-->
+                                <span class="col-md-4 col-sm-4 col-xs-4 no-padding"> Active</span>
+
+
+                            </label>
+
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-12  no-padding">
+                            <div class=" col-md-12 pull-right no-padding-right">
+                                <!--<input type="button" class=" AddbtnCSS btn btn-success" style="padding:0 8px; margin-top: 5px; display:inline-block; margin-right:5px" id="btnsaveholiday" value="Save">
+    <input type="button" class=" AddbtnCSS btn btn-success" style=" margin-top: 5px; padding:0 8px" id="BtnReset" value="Reset">-->
+
+                                <button style="width: fit-content;" type="submit" (click)="onSubmit()" class="btn btn-primary btn-block"> Save</button>
+                                <button [disabled]="buttonDisabledReset" style="width: fit-content;" type="submit" (click)="ResetDesignation();" class="btn btn-primary btn-block"> Reset</button>
+                                <!--<button [disabled]="buttonDisabledDelete" style="width: fit-content;" type="submit" (click)="DeleteHoliday();" class="btn btn-primary btn-block"> Delete</button>-->
+                            </div>
+                        </div>
+                        <!--<div class="col-md-8 col-sm-8 col-xs-12 no-padding">
+
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-12  no-padding">
+                        <div class=" col-md-12 pull-right no-padding-right">
+                            <input type="button" class=" AddbtnCSS btn btn-success" style="padding:0 8px; margin-top: 5px; display:inline-block; margin-right:5px" id="btnsaveholiday" value="Save">
+                            <input type="button" class=" AddbtnCSS btn btn-success" style=" margin-top: 5px; padding:0 8px" id="BtnReset" value="Reset">
+                        </div>
+                    </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="display: none;"></th>
+                            <th>Sr No.</th>
+                            <th>Designation Code</th>
+                            <th>Designation Name</th>
+                            <th>Created By</th>
+                            <th>Created On</th>
+                            <th>Active</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let data of designation.dataList ; index as i" (dblclick)="onRowClicked(data)" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+                            <!--<tr *ngFor="let data of holiday.dataList ; index as i" >-->
+                            <td style="display: none;">{{data.DId }}</td>
+                            <td>{{data.Sno }}</td>
+                            <td>{{data.DesignationCode}}</td>
+                            <td>{{data.DesignationName}}</td>
+                            <th>{{data.CreatedBy}}</th>
+                            <th>{{data.CreatedOn}}</th>
+                            <th>{{data.IsActive}}</th>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+</form>
+    </div>
+</div>
