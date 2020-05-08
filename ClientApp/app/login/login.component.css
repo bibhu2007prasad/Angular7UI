@@ -708,6 +708,7 @@ label.text1 {
 
     #navbar1 .navbar-container {
         padding-left: 0px;
+        width:100%;
     }
 
 span#zipNachFooter {
