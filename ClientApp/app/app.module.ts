@@ -75,6 +75,11 @@ import { UnprocessedMandatesOnusComponent } from './master/unprocessed-mandates-
 import { LegacyUploadComponent } from './master/legacy-upload/legacy-upload.component';
 import { ReCreateMandateComponent } from './master/re-create-mandate/re-create-mandate.component';
 import { SingleMandateComponent } from './master/single-mandate/single-mandate.component';
+
+import { NachsuccessonusComponent } from './master/nachsuccessonus/nachsuccessonus.component';
+import { NachunsuccessonusComponent } from './master/nachunsuccessonus/nachunsuccessonus.component';
+import { NachsuccessComponent } from './master/nachsuccess/nachsuccess.component';
+import { NachunsuccessComponent } from './master/nachunsuccess/nachunsuccess.component';
 @NgModule({
     declarations: [
         AppComponent
@@ -89,7 +94,7 @@ import { SingleMandateComponent } from './master/single-mandate/single-mandate.c
          CorporatesetupComponent,DebitPresentmentSetupComponent,UserRoleSetupComponent,SubmemberBankSetupComponent,RegSuccessComponent,RegUnsuccessComponent
          ,RegUnsuccessOnusComponent,RegSuccessOnusComponent,HistoricalMandateOnusComponent
          ,ProcessedMandatesComponent, UnprocessedMandatesComponent
-         , ProcessedMandatesOnusComponent, UnprocessedMandatesOnusComponent, LegacyUploadComponent, ReCreateMandateComponent, SingleMandateComponent 
+         , ProcessedMandatesOnusComponent, UnprocessedMandatesOnusComponent, LegacyUploadComponent, ReCreateMandateComponent, SingleMandateComponent, NachsuccessonusComponent, NachunsuccessonusComponent, NachsuccessComponent, NachunsuccessComponent 
     ],
      imports: [
         BrowserModule,
