@@ -40,6 +40,10 @@ import { LegacyUploadComponent } from './master/legacy-upload/legacy-upload.comp
 import { ReCreateMandateComponent } from './master/re-create-mandate/re-create-mandate.component';
 import { SingleMandateComponent } from './master/single-mandate/single-mandate.component';
 
+import { NachsuccessonusComponent } from './master/nachsuccessonus/nachsuccessonus.component';
+import { NachunsuccessonusComponent } from './master/nachunsuccessonus/nachunsuccessonus.component';
+import { NachsuccessComponent } from './master/nachsuccess/nachsuccess.component';
+import { NachunsuccessComponent } from './master/nachunsuccess/nachunsuccess.component';
 const routes: Routes = [{ path: '', redirectTo: '', component: LoginComponent, pathMatch: 'full' },
     { path: 'Login', component: LoginComponent },
     { path: 'user', component: UserComponent },
@@ -79,7 +83,11 @@ const routes: Routes = [{ path: '', redirectTo: '', component: LoginComponent, p
     { path: 'UnprocessedMandatesOnus', component: UnprocessedMandatesOnusComponent },
     { path: 'LegacyUpload', component: LegacyUploadComponent },
     { path: 'ReCreateMandate', component: ReCreateMandateComponent },
-    { path: 'SingleMandate', component: SingleMandateComponent }
+    { path: 'SingleMandate', component: SingleMandateComponent },
+    { path: 'Nachsuccessonus', component: NachsuccessonusComponent },
+    { path: 'Nachunsuccessonus', component: NachunsuccessonusComponent },
+    { path: 'Nachsuccess', component: NachsuccessComponent },
+    { path: 'Nachunsuccess', component: NachunsuccessComponent }
 ];
 
 @NgModule({
