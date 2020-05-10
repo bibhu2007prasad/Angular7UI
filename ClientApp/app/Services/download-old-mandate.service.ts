@@ -30,11 +30,11 @@ export class DownloadOldMandateService {
     // var i = item.EntityId;
     return this._http.get<any>(this.baseUrl + 'api/Downloadoldemandate/GetUserCorpData/' + this.EntityId );
   }
-  BindGridData(FromDate, ToDate, UserId,EntityId,ReferenceNo,ActivityName): Observable<UnderProcessMandateOutWard> {
+  BindGridData(FromDate, ToDate, UserId,sponsorbankcode,EntityId,ReferenceNo,ActivityName): Observable<UnderProcessMandateOutWard> {
      // alert(FromDate + " " + ToDate + " " + UserId);
       //alert("Service" + FromDate + " " + ToDate);
-      var Bank="DEMORBL0001";
-      return this._http.get<UnderProcessMandateOutWard>(this.baseUrl + 'api/Downloadoldemandate/SearchData/' + FromDate + '/' + ToDate + '/' + Bank + '/' + UserId +'/' + EntityId + '/' + ReferenceNo+ '/' + ActivityName);
+      //var Bank="DEMORBL0001";
+      return this._http.get<UnderProcessMandateOutWard>(this.baseUrl + 'api/Downloadoldemandate/SearchData/' + FromDate + '/' + ToDate + '/' + sponsorbankcode + '/' + UserId +'/' + EntityId + '/' + ReferenceNo+ '/' + ActivityName);
   }
   errorHandler(error: Response) {
       console.log(error);

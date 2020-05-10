@@ -18,7 +18,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class UnprocessedMandatesComponent implements OnInit {
   UnderProcessMandateForm: FormGroup; HeaderArray;corporate:Corporate; sponserBank:SponserBank;
   BindAllData: UnderProcessMandateOutWard; TotalCount = 0; dataArray: Array<UnderProcessMandateOutWard> = [];
-  Preloader: boolean = true;EntityId:string;ReferenceNo:string;ActivityName:string;loading: boolean = false;
+  Preloader: boolean = true;sponsorbankcode:string;EntityId:string;ReferenceNo:string;ActivityName:string;loading: boolean = false;
 
 
 
@@ -57,7 +57,7 @@ export class UnprocessedMandatesComponent implements OnInit {
       FromDate: [''],
       ToDate: [''],
       EntityId: [0],
-      sponserbankcode: [0],
+      sponsorbankcode: [0],
       ReferenceNo: [''],
       ActivityName: ['']
      
@@ -69,7 +69,8 @@ export class UnprocessedMandatesComponent implements OnInit {
   }
  
   tabledata;
-  toggleSelect = function (event) {     
+  toggleSelect = function (event) {   
+    debugger;  
       this.all = event.target.checked;
       this.tabledata.forEach(function (item) {
           item.selected = event.target.checked;
@@ -83,6 +84,7 @@ export class UnprocessedMandatesComponent implements OnInit {
       }
   }   
   onChange(event, item) {
+    debugger;
       this.checkFlag = 0;
       var CheckedCount = 0, UncheckedCount = 0;
       if (event.target.checked) {
@@ -131,6 +133,14 @@ SearchFunction(FromDate, ToDate) {
   const datat = this.UnderProcessMandateForm.value;
     this.Preloader = true;
     let item = JSON.parse(sessionStorage.getItem('User'));
+    if(datat.sponsorbankcode==0)
+    {
+      this.sponsorbankcode="0";
+    }
+    else
+    {
+      this.sponsorbankcode=datat.sponsorbankcode;
+    }
     if(datat.EntityId==0)
     {
       this.EntityId="0";
@@ -160,10 +170,11 @@ SearchFunction(FromDate, ToDate) {
   //   var ActivityName="5053327220142429";
   //   var EntityID="1";
     if (FromDate != "" && ToDate != "") {
-        this.myservice.BindGridData(FromDate, ToDate, item.UserId,this.EntityId,this.ReferenceNo,this.ActivityName).subscribe(
+        this.myservice.BindGridData(FromDate, ToDate, item.UserId,this.sponsorbankcode,this.EntityId,this.ReferenceNo,this.ActivityName).subscribe(
             (data) => {
                 this.Preloader = false;
                 this.BindAllData.dataList = data;
+                this.tabledata = data;
                 let json = JSON.stringify(this.BindAllData.dataList);
                 var CountRecordArray = typeof json != 'object' ? JSON.parse(json) : json;
                 this.TotalCount = CountRecordArray.length;
@@ -221,6 +232,7 @@ SearchFunction(FromDate, ToDate) {
   }
   
   downloadScannedMandate() {
+    debugger;
       this.ZipDownloadArray = [];
       if (this.checkFlag == 0) {
          
@@ -239,6 +251,7 @@ SearchFunction(FromDate, ToDate) {
 
 
   getZipFile(data: any) {
+    debugger;
       var a: any = document.createElement("a");
       document.body.appendChild(a);
       a.style = "display: none";

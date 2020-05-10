@@ -57,9 +57,9 @@
                                 <option>Bank 2</option>
                                 <option>Bank 3</option>
                             </select> -->
-                            <select class="dropdown col-sm-12 col-md-12 col-xs-12" formControlName="sponserbankcode" >
+                            <select class="dropdown col-sm-12 col-md-12 col-xs-12" formControlName="sponsorbankcode" >
                                 <option value="0" selected>Select</option>
-                                <option *ngFor="let data of sponserBank.dataList" value={{data.sponserbankcode}}  >
+                                <option *ngFor="let data of sponserBank.dataList" value={{data.sponsorbankcode}}  >
                                     {{data.name}}
                                 </option>
                             </select>
@@ -132,6 +132,8 @@
                         <div class="col-md-1 col-sm-1 col-xs-1 no-padding">
                             <!-- <input type="button" class="addbtnCSS btn btn-success" value="Search"> -->
                             <input type="button" class="col-sm-12 col-md-12 col-xs-12y btn btn-primary htmldateheight" value="Search" (click)="SearchFunction(FromDate.value,ToDate.value)" />
+                            <button type="button" class="btn btn-success" (click)="downloadExcel()">Download Mandate Excel File</button> &nbsp;
+                             <button type="button" class="btn btn-success" (click)="downloadScannedMandate()">Download Scanned mandate</button>
                         </div>
                     </div>
                 </div>
@@ -164,7 +166,7 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let Data of BindAllData.dataList ; index as i">
-                            <!-- <td style="width:150px;"><input type="checkbox" value="td.selected" [checked]="td.selected" (change)="onChange($event,td); td.selected = !(td.selected)" name="all"></td> -->
+                            <td style="width:150px;"><input type="checkbox" value="Data.selected" [checked]="Data.selected" (change)="onChange($event,Data); Data.selected = !(Data.selected)" name="all"></td>
                             <td style="width:150px;">{{Data.CorpName}}</td>
                             <td style="width:150px;">{{Data.mandateid}}</td>
                             <td style="width:150px;">{{Data.Customer1}}</td>

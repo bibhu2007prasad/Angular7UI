@@ -1,149 +1,126 @@
 <div class="main-content" id="maincontent">
     <div class="content">
-        <div class="col-md-12 col-sm-6 col-xs-4 contnt-wrapper">
-            <div class="col-sm-6 col-md-6 col-xs-3 no-padding">
-                <span class="legal">Re-Create Mandate</span>
-            </div>
-            <div class="rightmenu">
-                <div class="toolbar pull-right">
-
+       <form [formGroup]="ReCreateMandateForm" autocomplete="off" >
+       <div class="col-md-12 col-sm-6 col-xs-4 contnt-wrapper">
+          <div class="col-sm-6 col-md-6 col-xs-3 no-padding">
+             <span class="legal">Re-Create Mandate</span>
+          </div>
+          <div class="rightmenu">
+             <div class="toolbar pull-right">
+             </div>
+          </div>
+       </div>
+       <div class="clearfix"></div>
+       <div class="col-sm-12 col-xs-12 col-md-12">
+          <div class="col-sm-12 col-xs-12 col-md-12">
+             <div class="row boxhead">
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                   <div class="form-group">
+                      <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                      From Date:
+                      </label>
+                      <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                         <!-- <input type="date" class="col-sm-12 col-md-12 col-xs-12" /> -->
+                         <input name="FromDate" type="date" id=""    value="{{CurrentDate | date:'yyyy-MM-dd'}}"    class="col-sm-12 col-md-12 col-xs-12 htmldateheight" #FromDate formControlName="FromDate" />    
+                      </div>
+                   </div>
                 </div>
-            </div>
-        </div>
-        <div class="clearfix"></div>
-
-        <div class="col-sm-12 col-xs-12 col-md-12">
-            <div class="col-sm-12 col-xs-12 col-md-12">
-                <div class="row boxhead">
-                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
-
-                        <div class="form-group">
-                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
-                                From Date:
-                            </label>
-                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
-                                <input type="date" class="col-sm-12 col-md-12 col-xs-12" />
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
-
-                        <div class="form-group">
-                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
-                                To Date:
-                            </label>
-                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
-                                <input type="date" class="col-sm-12 col-md-12 col-xs-12" />
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
-                        <div class="form-group">
-                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
-                                Mandate Activity:
-                            </label>
-                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
-                                <input type="text" class="col-sm-12 col-md-12 col-xs-12" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
-                        <div class="form-group">
-                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
-                                Reference No.:
-                            </label>
-                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
-                                <input type="text" class="col-sm-12 col-md-12 col-xs-12" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
-                        <div class="form-group">
-                            <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
-                                Mandate ID:
-                            </label>
-                            <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
-                                <input type="text" class="col-sm-12 col-md-12 col-xs-12" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-2 col-sm-2 col-xs-12  no-padding">
-                        <div class=" col-md-12 pull-right no-padding-right">
-                            <input type="button" class="AddbtnCSS btn btn-success" style=" margin-top: 5px; padding:0 8px" id="BtnReset" value="Reset">
-                        </div>
-                    </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                   <div class="form-group">
+                      <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding">
+                      To Date:
+                      </label>
+                      <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                         <!-- <input type="date" class="col-sm-12 col-md-12 col-xs-12" /> -->
+                         <input name="ToDate" type="date" id=""    value="{{CurrentDate | date:'yyyy-MM-dd'}}"    class="col-sm-12 col-md-12 col-xs-12 htmldateheight" #ToDate formControlName="ToDate" /> 
+                      </div>
+                   </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Sr No.</th>
-                        <th>Mandate ID</th>
-                        <th>Recreate Mandate ID</th>
-                        <th>Corporate Name</th>
-                        <th>Activity Name</th>
-                        <th>Reference No.</th>
-                        <th>Phone No.</th>
-                        <th>Customer Name</th>
-                        <th>Email ID</th>
-                        <th>Created On</th>
-                        <th>Rejected Reason</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>123</td>
-                        <td>1234</td>
-                        <td>Corporate 1</td>
-                        <td>Activity 1</td>
-                        <td>Ref1</td>
-                        <td>98765432109</td>
-                        <td>John</td>
-                        <td>John@gmail.com</td>
-                        <td>25 Dec 2019</td>
-                        <td>Reason 1</td>
-                        <td>Active</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>123</td>
-                        <td>1234</td>
-                        <td>Corporate 1</td>
-                        <td>Activity 1</td>
-                        <td>Ref1</td>
-                        <td>98765432109</td>
-                        <td>John</td>
-                        <td>John@gmail.com</td>
-                        <td>25 Dec 2019</td>
-                        <td>Reason 1</td>
-                        <td>Active</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>123</td>
-                        <td>1234</td>
-                        <td>Corporate 1</td>
-                        <td>Activity 1</td>
-                        <td>Ref1</td>
-                        <td>98765432109</td>
-                        <td>John</td>
-                        <td>John@gmail.com</td>
-                        <td>25 Dec 2019</td>
-                        <td>Reason 1</td>
-                        <td>Active</td>
-                    </tr>
-                </tbody>
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                   <div class="form-group">
+                      <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
+                      Mandate Activity:
+                      </label>
+                      <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                         <input type="text" class="col-sm-12 col-md-12 col-xs-12" ng-change="Search(ActivityName)"  name="activityName" formControlName="ActivityName"
+                            placeholder="Activity Name" />
+                      </div>
+                   </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                   <div class="form-group">
+                      <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
+                      Reference No.:
+                      </label>
+                      <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                         <!-- <input type="text" class="col-sm-12 col-md-12 col-xs-12" /> -->
+                         <input type="text" class="col-sm-12 col-md-12 col-xs-12" ng-change="Search(ReferenceNo)"  name="referenceNo" formControlName="ReferenceNo"
+                            placeholder="Reference No"/>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12 no-padding">
+                   <div class="form-group">
+                      <label class="col-sm-4 col-md-4 col-xs-4 control-label no-padding" for="form-field-2">
+                      Mandate ID:
+                      </label>
+                      <div class="col-sm-7 col-md-7 col-xs-7 no-padding txtField">
+                         <!-- <input type="text" class="col-sm-12 col-md-12 col-xs-12" /> -->
+                         <input type="text" class="col-sm-12 col-md-12 col-xs-12" ng-change="SearchIndiVisual(MandateId)"  name="mandateId" formControlName="MandateId"
+                         placeholder="MandateId"/>
+                      </div>
+                   </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12  no-padding">
+                   <div class=" col-md-12 pull-right no-padding-right">
+                      <!-- <input type="button" class="AddbtnCSS btn btn-success" style=" margin-top: 5px; padding:0 8px" id="BtnReset" value="Reset"> -->
+                      <input type="button" class="col-sm-12 col-md-12 col-xs-12y btn btn-primary htmldateheight" value="Search" (click)="SearchFunction(FromDate.value,ToDate.value)" >
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+       <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv">
+          <table>
+             <thead>
+                <tr>
+                   <th>Sr No.</th>
+                   <th>Mandate ID</th>
+                   <th>Recreate Mandate ID</th>
+                   <th>Corporate Name</th>
+                   <th>Activity Name</th>
+                   <th>Reference No.</th>
+                   <th>Phone No.</th>
+                   <th>Customer Name</th>
+                   <th>Email ID</th>
+                   <th>Created On</th>
+                   <th>Rejected Reason</th>
+                   <th>Action</th>
+                </tr>
+             </thead>
+             <tbody>
+                <tr *ngFor="let Data of BindAllData" (dblclick)="doubleClick(Data)">
 
-            </table>
+                    <td style="width:300px;">{{Data.Srno}}</td>
+                    <td style="width:350px;">{{Data.MandateId}}</td>
+                    <td style="width:150px;">{{Data.Recreate_MandateId}}</td>
 
-        </div>
+                    <td style="width:300px;">{{Data.Name}}</td>
+                    <td style="width:350px;">{{Data.ActivityName}}</td>
+                    <td style="width:150px;">{{Data.Refrence1}}</td>
+                    <td style="width:150px;">{{Data.PhoneNumber}}</td>
+                    <td style="width:150px;">{{Data.Customer1}}</td>
 
+                    <td style="width:150px;">{{Data.EmailId}}</td>
+
+                    <td style="width:350px;">{{Data.CreatedOn}}</td>
+                    <td style="width:150px;">{{Data.RejectedReason}}</td>
+                    <td><button type="button" class="btn btn-info" matTooltip="Click Edit Button"(click)="Recreate(Data.MandateId)">Recreate</button></td>
+
+                </tr>
+             </tbody>
+          </table>
+       </div>
+       </form>
     </div>
-</div>
+ </div>
