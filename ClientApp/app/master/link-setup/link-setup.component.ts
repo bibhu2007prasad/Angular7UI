@@ -116,16 +116,16 @@ export class LinkSetupComponent implements OnInit {
       };
   }
  
-  loadAllLinkSetUps() {
-      this.loading = true;
-      var currentContext = this;
-      this._linkSetUpService.getLinkSetUps().
-          subscribe((data) => {
-              currentContext.linkSetUp.dataList = data.Table;
-          });
-      // console.log(sessionStorage.getItem('ID'));
-      this.loading = false;
-  }
+loadAllLinkSetUps() {
+    this.loading = true;
+    var currentContext = this;
+    this._linkSetUpService.getLinkSetUps().
+        subscribe((data) => {
+            currentContext.linkSetUp.dataList = data.Table;
+        });
+    // console.log(sessionStorage.getItem('ID'));
+    this.loading = false;
+}
   loadAllParentMenus() {
     this.loading = true;
     var currentContext = this;

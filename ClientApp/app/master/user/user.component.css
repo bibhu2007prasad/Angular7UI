@@ -4,6 +4,10 @@
     top: 7px;
     opacity: 0;
 }
+.table tr.active td {
+    background-color: #123456 !important;
+    color: white;
+}
 
 .radio input[type=radio] {
     position: absolute;

@@ -1,6 +1,10 @@
 .card-header {
     padding: 0px;
 }
+.table tr.active td {
+    background-color: #123456 !important;
+    color: white;
+}
 
 .panel-heading {
     background-color: #666;

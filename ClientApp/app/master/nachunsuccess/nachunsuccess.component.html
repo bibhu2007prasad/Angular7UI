@@ -1,0 +1,98 @@
+<div class="main-content" id="maincontent">
+    <div class="content">
+        
+            <div class="col-md-12 col-sm-6 col-xs-4 contnt-wrapper">
+                <div class="col-sm-6 col-md-6 col-xs-3 no-padding">
+                    <span class="legal">Nach UnSuccess</span>
+                </div>
+                <div class="rightmenu">
+                    <div class="toolbar pull-right">
+                      <ul class="toolbar-content">
+                          <li>
+                              <i class="fa fa-download" aria-hidden="true" title="Export"></i>
+                              <label>
+                                  Export
+                              </label>
+                          </li>
+  
+                          <li (click)="backClick()" >
+                              <i class="fa fa-reply" aria-hidden="true" title="Back"></i>
+                              <label>
+                                  Back
+                              </label>
+                          </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+  
+            
+                <div class="col-sm-12 col-xs-12 col-md-12" *ngIf="isParentShow">
+                  <table id="nachsuccessheader">
+                      <thead>
+                          <tr>
+                             
+                              <!-- <th>Sr No.</th> -->
+                              <th>File No.</th>
+                              <th>Total Count</th>
+                              <th>Created By</th>
+                              <th>Created On</th>
+                              <th>Response On</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let data of headerGrid.dataList ; index as i" (dblclick)="onRowClicked(data)" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+                              <!--<tr *ngFor="let data of holiday.dataList ; index as i" >-->
+                                  <td >{{data.FileNo }}</td>
+                                  <td>{{data.TotalCount }}</td>
+                                  <td>{{data.UserName }}</td>
+                                  <td>{{data.CreatedOn }}</td>
+                                  <td>{{data.Response }}</td>
+                                                           
+                              </tr>
+                      </tbody>
+                  </table>
+                </div>
+           
+            <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv" *ngIf="isChildShow">
+          <span id="lblFileNo" class="col-md-6 col-sm-6 col-xs-6 p-0 mt-2" [innerHTML]="FileNo"> 0 </span>
+              <table id="nachsuccessdetail">
+                  <thead>
+                      <tr>
+                         
+                          <!-- <th>Sr No.</th> -->
+                          <th>UMRN</th>
+                          <th>Reference No.</th>
+                          <th>Amount</th>
+                          <th>Client Code</th>
+                          <th>Corporate Ac/No.</th>
+                          <th>Status</th>
+                          <th>Reason</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let data of detailGrid.dataList ; index as i" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+                          <!--<tr *ngFor="let data of holiday.dataList ; index as i" >-->
+                              
+                              <!-- <td>{{data.Srno }}</td> -->
+                              <td >{{data.UMRN }}</td>
+                              <td>{{data.ReferenceNo }}</td>
+                              <td>{{data.Amount }}</td>
+                              <td>{{data.ClientCode }}</td>
+                              <td>{{data.CorporateAcNo }}</td>
+                              <td>{{data.Status }}</td>
+                              <td>{{data.Reason }}</td>
+                                                       
+                          </tr>
+                  </tbody>
+              </table>
+            </div>
+        
+    </div>
+  </div>
+  
+      
+  
+  
+  

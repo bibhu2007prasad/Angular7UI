@@ -5,7 +5,7 @@ body {
 .quickLeftDiv {
     background: #003974;
     height: 45px;
-    width: 190px;
+    width: 84% !important;
     float: left;
 }
 
@@ -23,11 +23,6 @@ body {
 
 .bolder {
     font-weight: bolder;
-}
-
-i.ace-icon.fa.fa-key {
-    font-size: 12px;
-    margin: 13px 4px 0 0;
 }
 
 i.fa.fa-leaf {
@@ -272,11 +267,6 @@ a.back-to-login-link {
     background: #f1f1f1;
 }
 
-i.ace-icon.fa.fa-key {
-    left: auto;
-    right: 3px;
-    float: left;
-}
 
 .toolbar1 {
     right: 0;
@@ -536,9 +526,6 @@ label:hover ~ input[type=password] {
     background: #dcdcdc;
 }
 
-.ace-nav > li.light-blue > a {
-    background-color: #003974;
-}
 
 .footer .footer-inner .footer-content {
     /* position: absolute; */
@@ -718,7 +705,7 @@ label.text1 {
 }
 
     .zipNachTheme .zipNachlogo img {
-        width: 66%;
+        width: 58%;
         padding-left: 16px;
     }
 
@@ -741,7 +728,8 @@ label.text1 {
 }
 
 .zipNachTheme .user-info {
-    top: 27%
+    vertical-align: middle;
+    padding-right: 5px;
 }
 
 .zipNachTheme .ace-nav > li > a > .ace-icon {
@@ -891,3 +879,10 @@ a.headerRightIcon i {
     line-height: 35px;
     position: relative;
 }
+#rbllogpassword{background-color: #fcfeff;
+    /* padding: 5px; */
+    border-radius: 0px;
+    border: 1px solid #f9f3f3;
+}
+#rbllogpassword li{font-size:13px; padding:5px; border-bottom:1px solid #ddd; cursor:pointer}
+#rbllogpassword li i{padding-right:3px}

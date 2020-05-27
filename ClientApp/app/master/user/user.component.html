@@ -7,38 +7,43 @@
             <div class="rightmenu">
                 <div class="toolbar pull-right">
                     <ul class="toolbar-content">
-
-                        <li>
-                            <i class="fa fa-file-text" aria-hidden="true" title="New"></i>
-                            <label>
-                                New
-                            </label>
-                        </li>
-                        <li>
-                            <i class="fa fa-pencil-square-o" aria-hidden="true" title="Edit"></i>
-                            <label>
-                                Edit
-                            </label>
-                        </li>
-                        <li>
-                            <i class="fa fa-floppy-o" aria-hidden="true" title="Save"></i>
-                            <label>
-                                Save
-                            </label>
-                        </li>
+                    <li (click)="newClick()">
+                      <i class="fa fa-file-text" aria-hidden="true" title="New"></i>
+                      <label>
+                      New
+                      </label>
+                   </li>
+                   <li (click)="editClick()">
+                      <i class="fa fa-pencil-square-o" aria-hidden="true" title="Edit"></i>
+                      <label>
+                      Edit
+                      </label>
+                   </li>
+                   <li (click)="SaveFun()">
+                      <i class="fa fa-floppy-o" aria-hidden="true" title="Save"></i>
+                      <label>
+                      Save
+                      </label>
+                   </li>
+                   <li (click)="deleteClick()"> 
+                      <i class="fa fa-times" aria-hidden="true" title="Delete"></i>
+                      <label>
+                      Delete
+                      </label>
+                   </li>
+                   <li (click)="backClick()">
+                      <i class="fa fa-reply" aria-hidden="true" title="Back"></i>
+                      <label>
+                      Back
+                      </label>
+                   </li>
                        
-                        <li>
-                            <i class="fa fa-reply" aria-hidden="true" title="Back"></i>
-                            <label>
-                                Back
-                            </label>
-                        </li>
                     </ul>
                 </div>
             </div>
         </div>
  
-        <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv" style="display:block;">
+        <div class="col-md-12 col-sm-12 col-xs-12" id="tbldiv" *ngIf="isMainGridShow">
             <table>
                 <thead>
                     <tr>
@@ -53,7 +58,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+                     <!-- <tr *ngFor="let Data of MainGridData" (dblclick)="onRowClicked(Data)" (click)="setClickedRow(i)" [class.active]="i == selectedRow">
+                     
+                      <td style="display: none;">{{Data.EntityId }}</td>
+                      <td style="width:150px;">{{Data.Srno}}</td>
+                      <td style="width:150px;">{{Data.ParentBank}}</td>
+                      <td style="width:150px;">{{Data.Code}}</td>
+                      <td style="width:150px;">{{Data.Name}}</td>
+                      <td style="width:150px;">{{Data.SponsorBankName}}</td>
+                   </tr>  -->
                 </tbody>
 
             </table>
@@ -61,7 +74,7 @@
         </div>
 
 
-        <div id="divform" class=" col-md-12 col-sm-12 col-xs-12 no-padding">
+        <div id="divform" class=" col-md-12 col-sm-12 col-xs-12 no-padding" *ngIf="isMasterEntryFormShow">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="">
                     <div class="srol">
